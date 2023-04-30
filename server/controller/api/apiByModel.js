@@ -1,7 +1,6 @@
-
 const response = require('../../response');
 const config = require('../../config');
-const _ = require('lodash')
+const _ = require('lodash');
 var ItemLike = require('../../model/itemLike');
 var ItemDislike = require('../../model/itemDislike');
 var ItemBookmark = require('../../model/itemBookmark');
