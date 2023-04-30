@@ -1,3 +1,4 @@
+var fs = require('fs');
 const Model = require("../../model/periodMentorMedia");
 const PeriodMentor = require("../../model/periodMentor");
 const PeriodMentorMedia = require("../../model/periodMentorMedia");
@@ -9,7 +10,7 @@ const PeriodMentorMediaFile = require('../../model/periodMentorMediaFile');
 const { getVideoDurationInSeconds } = require('get-video-duration');
 var offset = parseInt(process.env.ROW_NUMBER);
 var BASE_URL = process.env.BASE_URL;
-var fs = require('fs');
+
 
 module.exports = {
     GET_ENTRANCE_TEST_FILE_ALL: (req, res, next) => {
@@ -35,6 +36,7 @@ module.exports = {
             })
     },
     POST_ENTRANCE_EXAM_FILE: (req , res , next) => {
+        // return console.log(req.file);
         // req.body.userId = req.data.personInfo._id;
         
         // let EntranceTestFile = new EntranceTestFile(req.body);
@@ -62,20 +64,29 @@ module.exports = {
             // return console.log(entranceTest)
             // let images = req.file;
             // return console.log(req.file.file)
-            let EntranceTestFile = new EntranceTestFile({
+            var EntranceTestFiles = new EntranceTestFile({
                 entranceTestId : entranceTest._id,
-                name : req.body.name,
+                title : req.body.title,
                 description : req.body.description,
-                // file : req.file.file
+                file : req.file.filename
             });
 
-            EntranceTestFile.save((err, doc) => {
+            EntranceTestFiles.save((err, doc) => {
                 if(doc) {
-                
-                // return console.log(EntranceTestFile._id)
+                    // return console.log(doc.entranceTestId.releaseDate)
+                    // EntranceTestFile.findByIdAndUpdate(doc.id ,{ "$set": { "relaseDate": doc.entranceTestId.releaseDate }} ,   config.mongooseUpdateOptions).exec((err , docs) => {
+                    //     if(docs) {
+                    //         // req.data.item = doc;
+                    //         // response.ok(req, res, next);
+                    //     } else {
+                    //         response.error(req, res, next, 'مشکل در بروزرسانی آیتم');
+                    //     }
+                    // })
+                // return console.log(doc);
+                // return console.log(entranceTest.entranceTestFileId);
                 
                 // entranceTest["EntranceTestFileId"] = EntranceTestFile._id
-                entranceTest.EntranceTestFileId.push(EntranceTestFile._id );
+                entranceTest.entranceTestFileId.push(EntranceTestFiles._id);
                 entranceTest.save();
 
                 req.data.item = doc;
@@ -89,5 +100,40 @@ module.exports = {
 
         })
 
+    },
+    DELETE_FILE: (req, res, next) => {
+        var itemId = req.body.itemId;
+        // var file_name = req.body.file_name;
+        // var periodMentorMediaId = req.body.periodMentorMediaId;
+        console.log('itemId ::::::::', itemId);
+        // console.log('periodMentorMediaId ::::::::', periodMentorMediaId);
+        
+        EntranceTestFile.findById(itemId).exec(async (err, doc) => {
+            if (doc) {
+                let entranceTest = await EntranceTest.findById(doc.entranceTestId).exec();
+                entranceTest.entranceTestFileId.pull(itemId);
+                entranceTest.save();
+                return console.log(doc.entranceTestId);
+                var file_name = doc.file;
+                var query = {
+                    _id: itemId,
+                };
+                EntranceTestFile.findOneAndDelete(query).exec(() => {
+                    console.log('doc ::::::::::::', doc);
+
+                    var filePath = 'public/uploads/entrance_test_file/' + file_name;
+                    if (fs.existsSync(filePath)) {
+                        fs.unlinkSync(filePath);
+                    }
+
+
+                    req.data.item = doc;
+                    response.ok(req, res, next);
+                });
+            } else {
+                console.log(err);
+                response.error(req, res, next, 'چنین آیتمی موجود نمی باشد');
+            }
+        });
     },
 };
