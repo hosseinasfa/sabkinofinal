@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/fonts/stylesheet.css'/>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+</head>
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=WordSection1 dir=RTL>
+
+    <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+.0001pt;text-align:center;line-height:normal;tab-stops:211.9pt center 261.65pt'><b><span
+                    lang=FA style='font-size:15.0pt;font-family:"EntezareZohoor 1 **"'>قرارداد
+مشاوره تحصیلی<o:p></o:p></span></b></p>
+
+    <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+line-height:normal;tab-stops:211.9pt center 261.65pt'><b><span lang=FA
+                                                               style='font-size:12.0pt;font-family:"B Mitra"'><o:p>&nbsp;</o:p></span></b>
+    </p>
+
+    <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+line-height:normal'><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>به
+موجب این قرارداد دانش آموز به نام و نام خانوداگی <span style='color:#E36C0A;
+mso-themecolor:accent6;mso-themeshade:191'><%= data.userId.firstName + ' ' + data.userId.lastName %></span><span
+                    style='color:#00B0F0'><span style='mso-spacerun:yes'> </span></span>با کد ملی<span
+                    style='color:#76923C;mso-themecolor:accent3;mso-themeshade:191'> </span><span
+                    style='color:#E36C0A;mso-themecolor:accent6;mso-themeshade:191'><%= data.userId.personalCode %></span><span
+                    style='color:#76923C;mso-themecolor:accent3;mso-themeshade:191'> </span>محصل در
+رشته <span style='color:#E36C0A;mso-themecolor:accent6;mso-themeshade:191'><%= data.userId.educationalFieldId.title %>
+<span style='mso-spacerun:yes'> </span></span>مقطع<span style='color:#76923C;
+mso-themecolor:accent3;mso-themeshade:191'> </span><span style='color:#E36C0A;
+mso-themecolor:accent6;mso-themeshade:191'><%= data.userId.educationalStageId.title %><span
+                        style='mso-spacerun:yes'>  </span></span>به مدتی معین، از تاریخ <span
+                    style='mso-spacerun:yes'>   <span style='color:#E36C0A;mso-themecolor:
+accent6;mso-themeshade:191'><%= createdAt + ' به مدت '%></span></span><span style='color:#E36C0A;mso-themecolor:
+accent6;mso-themeshade:191'><%= duration%> </span>
+
+                    در
+بستر سوپر اپلیکیشن <b>سبکی نو</b><span style='mso-spacerun:yes'>  </span>با
+آقای / خانم <span style='color:#E36C0A;mso-themecolor:accent6;mso-themeshade:
+191'><%= data.mentorId.firstName + ' ' + data.mentorId.lastName %></span> با کد ملی<span style='color:#E36C0A;mso-themecolor:accent6;
+mso-themeshade:191'><%= data.mentorId.personalCode %><span style='mso-spacerun:yes'>   </span></span>تحت
+مشاوره تحصیلی قرار می گیرد.<o:p></o:p></span></p>
+
+    <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+line-height:normal'><b><span lang=FA style='font-size:14.0pt;font-family:"B Mitra"'>شرایط
+قرارداد :<o:p></o:p></span></b></p>
+
+    <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+line-height:normal'><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>این
+قرار داد بر اساس زمان مذکور و بسته منتخب دانش آموز مبلغ<span style='color:#31849B;
+mso-themecolor:accent5;mso-themeshade:191'><%= data.price %></span></span><span lang=FA
+                                                                                style='font-size:10.0pt;font-family:"B Mitra"'>(ریال) </span><span
+                lang=FA
+                style='font-size:12.0pt;font-family:"B Mitra"'>می باشد که به صورت پرداخت آنلاین
+به درگاه بانکی متصل به حساب نرم افزار سبکی نو پرداخت می گردد .<o:p></o:p></span></p>
+
+    <p class=MsoNormal dir=RTL style='line-height:normal'><b><span lang=FA
+                                                                   style='font-size:14.0pt;font-family:"B Mitra"'>تعهدات مشاور:<o:p></o:p></span></b>
+    </p>
+
+    <p class=MsoListParagraphCxSpFirst dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>برنامه
+ریزی به صورت مجازی <span style='mso-spacerun:yes'> </span>و نوبت <span
+                    style='color:#31849B;mso-themecolor:accent5;mso-themeshade:191'> <%= setProgram %> </span><u>،در
+بستر<span style='mso-spacerun:yes'>  </span>سوپر اپلیکیشن <b>سبکی</b> <b>نو</b>
+</u><span style='mso-spacerun:yes'> </span>تا زمان قید شده در قرارداد، انجام
+خواهد شد.<o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>مشاور
+در قبال برنامه ریزی و وضعیت درسی دانش آموز تا پایان قرارداد کاملاً مسئول خواهد
+بود و به صورت نوبت <span style='color:#31849B;mso-themecolor:accent5;
+mso-themeshade:191'> <%= getReport %> </span>موظف به دریافت و بررسی گزارش کار ارائه شده
+توسط دانش آموز در بستر نرم افزار می باشد .<o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>در این
+دوره ثبت نام ، مشاور موظف به برقراری<span style='color:#31849B;mso-themecolor:
+accent5;mso-themeshade:191'> <%= data.mentorPackageId.callId.callCount %> </span><span
+                    style='mso-spacerun:yes'> </span>جلسه مشاوره تلفنی و پاسخگویی می باشد که ملزم
+به تابعیت دانش آموز از زمان و نحوه برقراری ارتباط در بستر نرم افزار است .</span><span
+                dir=LTR style='font-size:12.0pt;mso-bidi-font-family:"B Mitra"'><o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l2 level1 lfo1'><![if !supportLists]><span dir=RTL></span><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span dir=RTL></span><span lang=FA style='font-size:12.0pt;
+font-family:"B Mitra"'><span dir=RTL></span><span
+                    style='mso-spacerun:yes'> </span>ارائه زمان تماس مشاور با دانش آموز از پیش توسط
+شخص مشاور تعیین می گردد .</span><span dir=LTR style='font-size:12.0pt;
+mso-bidi-font-family:"B Mitra"'><o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>در
+صورت خرید دانش آموز در بسته ها ویژه </span><span lang=FA style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>–</span><span lang=FA style='font-size:12.0pt;
+font-family:"B Mitra"'> شامل کانال خصوصی مشاور در بستر نرم افزار ، پشتیبانی مجزا
+در بستر نرم افزار<span style='mso-spacerun:yes'>  </span>- مشاور موظف به ارائه
+و پیگیری منظم و با کیفیت آن ها به دانش آموز می باشد .</span><span dir=LTR
+                                                                  style='font-size:12.0pt;mso-bidi-font-family:"B Mitra"'><o:p></o:p></span>
+    </p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=AR-SA style='font-size:12.0pt;font-family:"B Mitra";
+mso-bidi-language:AR-SA'>مشاور متعهد می شود از انجام اعمال خلاف شئون حرفه اي و ارتكاب
+به كارهايي كه سبب هتك حرمت جامعه روان شناسان ومشاوران مي شود، پرهيز كند</span><span
+                dir=LTR></span><span dir=LTR style='font-size:12.0pt;mso-bidi-font-family:"B Mitra"'><span
+                    dir=LTR></span>.<o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=AR-SA style='font-size:12.0pt;font-family:"B Mitra";
+mso-bidi-language:AR-SA'>عدم استفاده از عناوين علمي و تخصصي غير واقعي كه به عنوان
+فريب مراجع محسوب مي شود استفاده نكنم</span><span dir=LTR></span><span dir=LTR
+                                                                      style='font-size:12.0pt;mso-bidi-font-family:"B Mitra"'><span
+                    dir=LTR></span>.<o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=AR-SA style='font-size:12.0pt;font-family:"B Mitra";
+mso-bidi-language:AR-SA'>مجاز به استفاده و بكارگيري افراد فاقد صلاحيت در امور روان
+شناسي و مشاوره از منظر نرم افزار و احراز آن توسط کادر فنی نمی باشد .</span><span
+                dir=LTR style='font-size:12.0pt;mso-bidi-font-family:"B Mitra"'><o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=AR-SA style='font-size:12.0pt;font-family:"B Mitra";
+mso-bidi-language:AR-SA'>در مواردي كه خارج از حوزه تخصصي مشاور باشد وارد نشده و
+دانش آموز را به متخصص ديگري ارجاع دهد</span><span dir=LTR></span><span dir=LTR
+                                                                       style='font-size:12.0pt;mso-bidi-font-family:"B Mitra"'><span
+                    dir=LTR></span>.</span><span
+                lang=FA style='font-size:12.0pt;font-family:"B Mitra"'><o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpLast dir=RTL style='text-indent:-.25in;line-height:
+normal;mso-list:l6 level1 lfo2'><![if !supportLists]><span style='font-size:
+12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings'><span style='mso-list:Ignore'>v<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=RTL></span><span lang=FA
+                                                          style='font-size:12.0pt;font-family:"B Mitra"'>تذکر: مشاور در مقابل نتیجه نهایی
+آزمون سراسری مسئولیتی نداشته و تنها تضمین کننده وضعیت درسی دانش آموز تا پایان
+این قرارداد می باشد.<o:p></o:p></span></p>
+
+    <p class=MsoNormal dir=RTL style='line-height:normal'><b><span lang=FA
+                                                                   style='font-size:14.0pt;font-family:"B Mitra"'>تعهدات دانش آموز:<o:p></o:p></span></b>
+    </p>
+
+    <p class=MsoListParagraphCxSpFirst dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l0 level1 lfo3'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>رعایت
+کلیه مفاد قانونی این نرم افزار شامل قوانین آموزشی، انضباطی و اخلاقی که در بدو
+ورود متعهد به آن گردیده است .<o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l0 level1 lfo3'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>رعایت
+ادب و احترام نسبت به <span style='mso-spacerun:yes'> </span>مشاور و پشتیبان نرم
+افزار <o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l0 level1 lfo3'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>حضور
+به موقع در کلاسها و واحد آموزشی و خروج در پایان ساعات مقرر ، همچنین پرهیز از
+خروج در ساعات مشاوره و آزمون، بدون اطلاع اولیاء و موافقت مسئول اداری یا معاون مؤسسه</span><span
+                dir=LTR style='font-size:12.0pt;mso-bidi-font-family:"B Mitra"'><o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l0 level1 lfo3'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>پاسخگویی
+<span style='mso-spacerun:yes'> </span>به موقع در بستر نرم افزار رأس ساعت اعلام
+شده نوبت مشاوره مجازی و تماس تلفنی و ارائه گزارش کار (عواقب پاسخگویی بر عهده ی
+دانش آموز بوده و مشاور هیچ گونه تعهدی برای ارائه ی خدمات خارج از نوبت تعهد شده
+ندارد.)<o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l0 level1 lfo3'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>اجرای
+کامل و بند به بند برنامه ریزی درسی در طول دوره <o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l3 level1 lfo4'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><b><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>تذکر:</span></b><span
+                lang=FA style='font-size:12.0pt;font-family:"B Mitra"'> طبق قوانین ، اگر دانش
+آموز پس از ثبت نام قصد انصراف از دوره را داشته باشد هزینه ای توسط مشاور یا نرم
+افزار عودت نمی گردد.</span><span dir=LTR style='font-size:12.0pt;mso-bidi-font-family:
+"B Mitra"'><o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l3 level1 lfo4'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>در
+میان گذاشتن تمامی مشکلات درسی با مشاور و پرهیز از هر گونه پنهان کاری<o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='margin-right:39.3pt;
+mso-add-space:auto;text-indent:-.25in;line-height:normal;mso-list:l5 level1 lfo5'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>ü<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><b><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>تذکر</span></b><span
+                lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>: مبنای زمان مشاوره دانش
+آموز، مدت و تعداد مکالمات ثبت شده در بستر نرم افزار می باشد <o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l6 level1 lfo2'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>v<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><b><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>تذکرمهم:</span></b><span
+                lang=FA style='font-size:12.0pt;font-family:"B Mitra"'> هرگونه کنسل نمودن زمان
+مشاوره از جانب دانش آموز، حق مطالبه ی آن جلسه را از وی سلب کرده و آن جلسه، در مجموع
+تعداد جلسات ایشان محاسبه می گردد.<o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l6 level1 lfo2'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>v<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><b><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>تذکر
+مهم:</span></b><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'> در
+صورت کوتاهی دانش آموز در هر یک از موارد فوق، مشاور طبق صلاح دید خود با وی
+برخورد و نسبت به ادامه کار، به صورت یک طرفه تصمیم خواهد گرفت.</span><span
+                dir=LTR style='font-size:12.0pt;mso-bidi-font-family:"B Mitra"'><o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpMiddle dir=RTL style='text-indent:-.25in;
+line-height:normal;mso-list:l6 level1 lfo2'><![if !supportLists]><span
+                style='font-size:12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>v<span
+                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                dir=RTL></span><b><span lang=FA style='font-size:12.0pt;font-family:"B Mitra"'>تذکر:</span></b><span
+                lang=FA style='font-size:12.0pt;font-family:"B Mitra"'> بسته ی مشاوره می تواند شامل
+برنامه ریزی درسی ، دریافت گزارش کار و مشاوره تلفنی و کانال اختصاصی مشاور <span
+                    style='mso-spacerun:yes'> </span>باشد.</span><span dir=LTR style='font-size:
+12.0pt;mso-bidi-font-family:"B Mitra"'><o:p></o:p></span></p>
+
+    <p class=MsoListParagraphCxSpLast dir=RTL style='text-indent:-.25in;line-height:
+normal;mso-list:l6 level1 lfo2'><![if !supportLists]><span style='font-size:
+12.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings'><span style='mso-list:Ignore'>v<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=RTL></span><b><span lang=FA
+                                                             style='font-size:12.0pt;font-family:"B Mitra"'>تذکر :</span></b><span
+                lang=FA
+                style='font-size:12.0pt;font-family:"B Mitra"'> این قرار داد به امضای الکترونیک
+هر یک از طرفین رسیده که این امر به واسطه انتخاب گزینه ( تایید می کنم ) می باشد
+.</span><span dir=LTR style='font-size:12.0pt;mso-bidi-font-family:"B Mitra"'><o:p></o:p></span></p>
+</div>
+
+</body>
+</html>

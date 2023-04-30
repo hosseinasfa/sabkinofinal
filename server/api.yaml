@@ -1,0 +1,674 @@
+openapi: 3.0.1
+info:
+  title: Nabi App Api
+  description: ""
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/api
+  - url: https://api.sabkino.com/api
+tags:
+  - name: auth
+    description:
+  - name: province
+    description:
+  - name: model
+    description:
+  - name: upload
+    description:
+paths:
+  /upload/file:
+    post:
+      tags:
+        - upload
+      summary: Upload File
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /model/{modelName}:
+    get:
+      tags:
+        - model
+      summary: Find All Items
+      parameters:
+        - in: query
+          name: aggregate
+          schema:
+            type: boolean
+        - name: modelName
+          in: path
+          description: ID
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+    post:
+      tags:
+        - model
+      summary: Create New Item
+      parameters:
+        - name: modelName
+          in: path
+          description: ID
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /model/{modelName}/schema:
+    get:
+      tags:
+        - model
+      summary: Get Schema Of Model
+      parameters:
+        - name: modelName
+          in: path
+          description: ID
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /model/{modelName}/{itemId}:
+    get:
+      tags:
+        - model
+      summary: Find Each Item
+      parameters:
+        - in: query
+          name: aggregate
+          schema:
+            type: boolean
+        - name: modelName
+          in: path
+          description: ID
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+        - name: itemId
+          in: path
+          description: ItemId
+          required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+    put:
+      tags:
+        - model
+      summary: Update Each Item
+      parameters:
+        - name: modelName
+          in: path
+          description: ID
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+        - name: itemId
+          in: path
+          description: ItemId
+          required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /model/{modelName}/{itemId}/like:
+    put:
+      tags:
+        - model
+      summary: Like Each Item
+      parameters:
+        - name: modelName
+          in: path
+          description: modelName
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+        - name: itemId
+          in: path
+          description: ItemId
+          required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /model/{modelName}/{itemId}/dislike:
+    put:
+      tags:
+        - model
+      summary: dislike Each Item
+      parameters:
+        - name: modelName
+          in: path
+          description: modelName
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+        - name: itemId
+          in: path
+          description: ItemId
+          required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /model/{modelName}/{itemId}/rate:
+    put:
+      tags:
+        - model
+      summary: Rate Each Item
+      parameters:
+        - name: modelName
+          in: path
+          description: modelName
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+        - name: itemId
+          in: path
+          description: ItemId
+          required: true
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                rate:
+                  type: integer
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /model/{modelName}/{itemId}/follow:
+    put:
+      tags:
+        - model
+      summary: Follow Each Item
+      parameters:
+        - name: modelName
+          in: path
+          description: modelName
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+        - name: itemId
+          in: path
+          description: ItemId
+          required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /model/{modelName}/{itemId}/bookmark:
+    put:
+      tags:
+        - model
+      summary: Bookmark Each Item
+      parameters:
+        - name: modelName
+          in: path
+          description: modelName
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+        - name: itemId
+          in: path
+          description: ItemId
+          required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /model/{modelName}/{itemId}/comment:
+    post:
+      tags:
+        - model
+      summary: Comment Each Item
+      parameters:
+        - name: modelName
+          in: path
+          description: modelName
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+        - name: itemId
+          in: path
+          description: ItemId
+          required: true
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                caption:
+                  type: string
+                  required: true
+                  default: ""
+                rate:
+                  type: integer
+                  required: true
+                  default: ""
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /model/{modelName}/{itemId}/report:
+    post:
+      tags:
+        - model
+      summary: Report Each Item
+      parameters:
+        - name: modelName
+          in: path
+          description: modelName
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+        - name: itemId
+          in: path
+          description: ItemId
+          required: true
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  required: true
+                  default: ""
+                caption:
+                  type: string
+                  required: true
+                  default: ""
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /model/{modelName}/{itemId}/active:
+    put:
+      tags:
+        - model
+      summary: Active Each Item
+      parameters:
+        - name: modelName
+          in: path
+          description: ID
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+        - name: itemId
+          in: path
+          description: ItemId
+          required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /model/{modelName}/{itemId}/deActive:
+    put:
+      tags:
+        - model
+      summary: DeActive Each Item
+      parameters:
+        - name: modelName
+          in: path
+          description: ID
+          required: true
+          schema:
+            $ref: "#/components/schemas/Models"
+        - name: itemId
+          in: path
+          description: ItemId
+          required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+        - ApiKeyAuth: []
+  /provinces:
+    get:
+      tags:
+        - province
+      summary: Find All Province
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Province"
+      security:
+        - ApiKeyAuth: []
+  /provinces/{provinceId}/cities:
+    get:
+      tags:
+        - province
+      summary: Find All City Of Each Province
+      parameters:
+        - name: provinceId
+          in: path
+          description: ID of Province to return
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/City"
+      security:
+        - ApiKeyAuth: []
+  /user:
+    get:
+      tags:
+        - auth
+      summary: is valid token
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+      security:
+      - ApiKeyAuth: []
+  /auth/phone-code/preAuth:
+    post:
+      tags:
+        - auth
+      summary: send phone to send sms verify
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                phone:
+                  type: string
+                  description: user phone number
+                  required: true
+                  default: ""
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+  /auth/phone-code/verify:
+    post:
+      tags:
+        - auth
+      summary: verify code and get token
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                phone:
+                  type: string
+                  required: true
+                  default: ""
+                code:
+                  type: string
+                  required: true
+                  default: ""
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+
+components:
+  schemas:
+    Models:
+      type: string
+      enum:
+        - academy
+        - category
+        - city
+        - education
+        - educationWordList
+        - educationalField
+        - educationalStage
+        - importanceOfLessons
+        - entranceExam
+        - field
+        - course
+        - itemBookmark
+        - itemComment
+        - itemFollower
+        - itemLike
+        - itemDislike
+        - itemRate
+        - itemReport
+        - chatUserReport
+        - malisonList
+        - person-Person
+        - person-User
+        - person-Teacher
+        - person-Family
+        - person-EducationalInstitutions
+        - person-Mentor
+        - person-SchoolBoss
+        - post-Post
+        - post-PostEvent
+        - post-PostQuestion
+        - post-PostEntertainment
+        - post-PostNews
+        - product
+        - question
+        - school
+        - deming
+        - quiz
+        - periodMentor
+        - periodMentorHeader
+        - periodMentorMedia
+        - periodMentorMediaComment
+        - periodMentorMediaFile
+        - periodMentorRate
+        - periodMentorPayment
+        - userMentorPackage
+        - mentorPackageList
+        - packageList
+        - onlineCallMentor
+        - onlineCall
+        - shoppingPrice
+        - setProgramList
+        - setProgramListReport
+        - setProgramExitUser
+        - chatList
+        - formula
+        - package
+        - setting
+        - banner
+        - motto
+        - feedbackCall
+        - feedbackCallUser
+        - onlineCallPackage
+        - mentorAvailableTime
+        - callPayment
+        - demoTour
+        - callLog
+        - setProgramPayment
+        - vipPst
+        - periodMentorReport
+        - vipPstReport
+        - vipPstMedia
+        - vipPstSave
+        - vipPstLike
+        - vipPstComment
+        - vipUserFollow
+        - category
+        - quizAnswer
+        - publisher
+        - publisherSeries
+        - publisherSeriesBook
+        - ambassador
+    ToggleModel:
+      type: string
+      enum:
+        - PostLike
+        - PostBookmark
+        - Follower
+    SubModel:
+      type: string
+      enum:
+        - PostComment
+        - PostReport
+    Province:
+      type: object
+      properties:
+        _id:
+          type: string
+        title:
+          type: string
+        slug:
+          type: string
+        latitude:
+          type: number
+          format: double
+        longitude:
+          type: number
+          format: double
+    City:
+      type: object
+      properties:
+        _id:
+          type: string
+        title:
+          type: string
+        slug:
+          type: string
+        latitude:
+          type: number
+          format: double
+        longitude:
+          type: number
+          format: double
+    ApiResponse:
+      type: object
+      properties:
+        status:
+          type: boolean
+        data:
+          type: object
+          properties: {}
+        message:
+          type: string
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-KEY

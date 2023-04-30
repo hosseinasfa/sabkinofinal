@@ -1,0 +1,21 @@
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:208:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/baryabco/nodevenv/web_socket/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/baryabco/nodevenv/web_socket/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/baryabco/nodevenv/web_socket/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/baryabco/nodevenv/web_socket/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}

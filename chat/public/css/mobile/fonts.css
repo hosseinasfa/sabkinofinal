@@ -1,0 +1,76 @@
+
+@font-face {
+    font-family: IRANSansMobile-en;
+    font-style: normal;
+    font-weight: bold;
+    src: url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-en/en-Iran-sans-web-bold.eot');
+    src: url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-en/en-Iran-sans-web-bold.eot?#iefix')
+    format('embedded-opentype'),
+        /* IE6-8 */
+    url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-en/en-Iran-sans-web-bold.woff2')
+    format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/
+    url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-en/en-Iran-sans-web-bold.woff')
+    format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-en/en-Iran-sans-web-bold.ttf')
+    format('truetype');
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: IRANSansMobile-en;
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-en/en-Iran-sans-web-light.eot');
+    src: url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-en/en-Iran-sans-web-light.eot?#iefix')
+    format('embedded-opentype'),
+        /* IE6-8 */
+    url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-en/en-Iran-sans-web-light.woff2')
+    format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/
+    url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-en/en-Iran-sans-web-light.woff')
+    format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-en/en-Iran-sans-web-light.ttf')
+    format('truetype');
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: IRANSansMobile-fa;
+    font-style: normal;
+    font-weight: bold;
+    src: url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-fa/fa-Iran-sans-web-bold.eot');
+    src: url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-fa/fa-Iran-sans-web-bold.eot?#iefix')
+    format('embedded-opentype'),
+        /* IE6-8 */
+    url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-fa/fa-Iran-sans-web-bold.woff2')
+    format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/
+    url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-fa/fa-Iran-sans-web-bold.woff')
+    format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-fa/fa-Iran-sans-web-bold.ttf')
+    format('truetype');
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: IRANSansMobile-fa;
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-fa/fa-Iran-sans-web-light.eot');
+    src: url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-fa/fa-Iran-sans-web-light.eot?#iefix')
+    format('embedded-opentype'),
+        /* IE6-8 */
+    url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-fa/fa-Iran-sans-web-light.woff2')
+    format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/
+    url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-fa/fa-Iran-sans-web-light.woff')
+    format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('https://passenger-pwa-cdn.snapp.ir/fonts/Iran-sans-fa/fa-Iran-sans-web-light.ttf')
+    format('truetype');
+    font-display: fallback;
+}

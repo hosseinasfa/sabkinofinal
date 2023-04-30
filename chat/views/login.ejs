@@ -1,0 +1,116 @@
+<!doctype html>
+<html dir="rtl">
+<head>
+    <link href="<%= mainUrl %>/css/fonts.css" rel="stylesheet">
+    <link href="<%= mainUrl %>/css/sweetalert2.min.css" rel="stylesheet">
+    <link href="<%= mainUrl %>/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%= mainUrl %>/css/login.css" rel="stylesheet">
+    <link href="<%= mainUrl %>/css/material.css" rel="stylesheet">
+    <title><%= title %></title>
+</head>
+<body>
+
+<div class="login-box">
+
+    <div class="login-area">
+        <div class="login-logo">
+            <img src="<%= mainUrl %>/images/sabkino_logo.png">
+            <h3>ورود به پنل سبکینو</h3>
+        </div>
+
+        <div class="login-item">
+            <label class="form-label">نام کاربری :</label>
+            <div class="input-box">
+                <input type="text" id="username" name="username" value="" class="form-input">
+            </div>
+        </div>
+
+        <div class="login-item">
+            <label class="form-label">رمز عبور :</label>
+            <div class="input-box">
+                <input type="password" id="password" name="password" value="" class="form-input">
+            </div>
+        </div>
+
+        <div class="login-button">
+            <button type="submit" class="btn-login">ورود</button>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="<%= mainUrl %>/js/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<!--<script src="https://code.jquery.com/jquery-1.11.1.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="<%= mainUrl %>/js/sweetalert2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+<script>
+
+    $('.btn-login').click(function () {
+        var username = $('#username').val();
+        var password = $('#password').val();
+        axios.post('/admin/login', {
+            'username': username,
+            'password': password
+        })
+            .then(function (response) {
+                console.log('response.status ',response.data.status);
+                if (response.data.status === true) {
+                    var tok = response.data.data.token;
+                    localStorage.setItem("token", tok);
+                    Swal.fire({
+                        title: "پیام سیستم",
+                        text: 'با موفقیت وارد شدید',
+                        icon: "success",
+                        confirmButtonColor: "#34c38f",
+                        confirmButtonText: "باشه",
+                        closeOnClickOutside: false,
+                    }).then(function (t) {
+
+                        // var xmlHttp = new XMLHttpRequest();
+                        // xmlHttp.open('Get', '/', true);
+                        // xmlHttp.setRequestHeader('X-api-key', tok);
+                        // xmlHttp.send();
+
+
+                        // response.redirect("/");
+                        <!--window.location.authorization =[{'test':'test'}];-->
+                        <!--window.location.href="<%= mainUrl %>";-->
+
+
+                    });
+                } else {
+                    Swal.fire({
+                        title: "پیام سیستم",
+                        text: 'اطلاعات حساب کاربری نامعتبر می باشد',
+                        icon: "error",
+                        confirmButtonColor: "#34c38f",
+                        confirmButtonText: "باشه",
+                        closeOnClickOutside: false,
+                    }).then(function (t) {
+                    });
+                }
+                console.log(response);
+            })
+            .catch(function (error) {
+                Swal.fire({
+                    title: "پیام سیستم",
+                    text: 'خطای سیستم',
+                    icon: "error",
+                    confirmButtonColor: "#34c38f",
+                    confirmButtonText: "باشه",
+                    closeOnClickOutside: false,
+                }).then(function (t) {
+                });
+                console.log(error);
+            });
+    });
+
+
+</script>
+</body>
+</html>

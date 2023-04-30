@@ -1,0 +1,268 @@
+<!doctype html>
+<html dir="rtl">
+<head>
+    <title><%=title%></title>
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/sweetalert2.min.css" rel="stylesheet">
+    <link href="css/chat.css" rel="stylesheet">
+    <link href="css/material.css" rel="stylesheet">
+</head>
+<body>
+<div class="user-list">
+    <div class="user-list-box" id="users">
+        <div class="user-scroll">
+            <div class="user-item" v-for="user in users" :data-id="user.id">
+                <div class="user-item-avatar">
+                    <img src="https://icon-library.com/images/user-png-icon/user-png-icon-16.jpg">
+                </div>
+
+                <div class="user-item-name">
+                    <div class="user-item-username">
+                        <span>نام :</span>
+                        <span v-text="user.firstName"></span>
+                    </div>
+                    <div class="user-item-family">
+                        <span>نام خانوادگی :</span>
+                        <span v-text="user.lastName"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="user-chat-scroll">
+            <div class="user-item">
+                <div class="user-item-avatar">
+                    <img src="https://icon-library.com/images/user-png-icon/user-png-icon-16.jpg">
+                </div>
+
+                <div class="user-item-name">
+                    <div class="user-item-username">
+                        <span>نام :</span>
+                        <span>aaaa</span>
+                    </div>
+                    <div class="user-item-family">
+                        <span>نام خانوادگی :</span>
+                        <span>wwww</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-item">
+                <div class="user-item-avatar">
+                    <img src="https://icon-library.com/images/user-png-icon/user-png-icon-16.jpg">
+                </div>
+
+                <div class="user-item-name">
+                    <div class="user-item-username">
+                        <span>نام :</span>
+                        <span>aaaa</span>
+                    </div>
+                    <div class="user-item-family">
+                        <span>نام خانوادگی :</span>
+                        <span>wwww</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-item">
+                <div class="user-item-avatar">
+                    <img src="https://icon-library.com/images/user-png-icon/user-png-icon-16.jpg">
+                </div>
+
+                <div class="user-item-name">
+                    <div class="user-item-username">
+                        <span>نام :</span>
+                        <span>aaaa</span>
+                    </div>
+                    <div class="user-item-family">
+                        <span>نام خانوادگی :</span>
+                        <span>wwww</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<input type="hidden" id="select_user_id" name="select_user_id" value="">
+
+<div class="main-content">
+    <div class="main-content-box">
+        <ul id="messages"></ul>
+
+        <div id="app">
+            <li v-for="user in users">
+                <span v-text="user.name + user.email"></span>
+            </li>
+        </div>
+    </div>
+
+
+    <div class="footer-box">
+        <div class="footer-text-box">
+            <input id="message_box" autocomplete="off"/>
+        </div>
+
+        <div class="footer-send-box">
+            <button class="btn-send-message">ارسال پیام</button>
+        </div>
+    </div>
+</div>
+
+
+<br>
+<script src="js/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<!--<script src="https://code.jquery.com/jquery-1.11.1.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="js/sweetalert2.min.js"></script>
+
+<script>
+    $(function () {
+        var own_user_id = '620e4a7b83888218223d56fd';
+        // let host = '192.186.1.80';
+        var socket = io();
+        // var io = require('socket.io-client');
+
+        // var socket = io.connect('//' + host + ':3000');
+        $('form').submit(function () {
+            socket.emit('chat message', $('#m').val(), 50);
+            $('#m').val('');
+            return false;
+        });
+
+
+        // var user_id = '61f81e1f9088e35b0ccabadd';
+        socket.on('chat message', function (msg) {
+            $('#messages').append($('<li>').text(msg));
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+
+        socket.on('show_log', function (msg) {
+            $('#messages').append($('<li>').text(msg));
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+
+
+        $('#accept').click(function () {
+            let m = $('#m').val();
+            socket.emit('accept order2', {
+                'order_id': m
+            });
+        });
+
+        socket.emit('user list', {'user_id': own_user_id});
+
+        socket.on('user list', function (data) {
+            console.log(data.userList);
+            new Vue({
+                el: '#users',
+                data: {
+                    users: data.userList
+                }
+            });
+        });
+
+
+        $(document).on('click', '.user-item', function () {
+            var id = $(this).data('id');
+            $('.user-item').removeClass('active');
+            $(this).addClass('active');
+            $('#select_user_id').val(id);
+            socket.emit('user chat list',{
+                'user_id':id
+            });
+        });
+
+        socket.on('user chat list',function (data){
+            console.log('chat :',data);
+        });
+
+
+        socket.emit('user joined', {
+            'user_id': own_user_id,
+        });
+
+
+        $('.btn-send-message').click(function () {
+            var message = $('#message_box').val();
+            if (message.length != 0) {
+                $('#message_box').val('');
+                var select_user_id = $('#select_user_id').val();
+                if (select_user_id.length != 0) {
+                    socket.emit('new message', {
+                        'me_id': own_user_id,
+                        'user_id': select_user_id,
+                        'message': message,
+                    });
+                } else {
+                    Swal.fire({
+                        title: "پیام سیستم",
+                        text: "خطای سیستم",
+                        icon: "error",
+                        confirmButtonColor: "#34c38f",
+                        confirmButtonText: "باشه",
+                        closeOnClickOutside: false,
+                    }).then(function (t) {
+                    });
+                }
+            } else {
+                Swal.fire({
+                    title: "پیام سیستم",
+                    text: "خطای سیستم",
+                    icon: "error",
+                    confirmButtonColor: "#34c38f",
+                    confirmButtonText: "باشه",
+                    closeOnClickOutside: false,
+                }).then(function (t) {
+                });
+            }
+        });
+
+        $('#message_box').keypress(function (e) {
+            if (e.keyCode == 13) {
+                if (message.length != 0) {
+                    var message = $('#message_box').val();
+                    $('#message_box').val('');
+                    var select_user_id = $('#select_user_id').val();
+                    if (select_user_id.length != 0) {
+                        socket.emit('new message', {
+                            'me_id': own_user_id,
+                            'user_id': select_user_id,
+                            'message': message,
+                        });
+                        $(this).val();
+                    } else {
+                        Swal.fire({
+                            title: "پیام سیستم",
+                            text: "خطای سیستم",
+                            icon: "error",
+                            confirmButtonColor: "#34c38f",
+                            confirmButtonText: "باشه",
+                            closeOnClickOutside: false,
+                        }).then(function (t) {
+                        });
+                    }
+                } else {
+                    Swal.fire({
+                        title: "پیام سیستم",
+                        text: "خطای سیستم",
+                        icon: "error",
+                        confirmButtonColor: "#34c38f",
+                        confirmButtonText: "باشه",
+                        closeOnClickOutside: false,
+                    }).then(function (t) {
+                    });
+                }
+            }
+
+        });
+
+
+    });
+</script>
+</body>
+</html>

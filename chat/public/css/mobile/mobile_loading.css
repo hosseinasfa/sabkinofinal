@@ -1,0 +1,82 @@
+.landing-page
+{
+    width: 100%;
+}
+
+.landing-page-icon {
+    margin: 140px auto 0px auto;
+    text-align: center;
+}
+
+.landing-page-icon h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.landing-page-icon h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    line-height: 40px;
+}
+
+
+.landing-button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0px 0px 0px;
+    position: absolute;
+    width: 100%;
+    top: 280px;
+}
+.landing-btn-kargah {
+    background-color: #0277bd;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 1px 2px 8px #404040;
+}
+
+.landing-btn-kargah img {
+    width: 100px;
+}
+.landing-btn-kargah-content {
+    margin: 30px 20px;
+}
+
+.landing-btn-kargah-content h2 {
+    color: white;
+}
+.landing-btn-kargah-content span {
+    color: white;
+}
+
+.landing-btn-cutclick {
+    background-color: #ff5a25;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 1px 2px 8px #404040;
+}
+
+.landing-btn-cutclick img {
+    width: 100px;
+}
+
+.landing-btn-cutclick-content {
+    margin: 20px 15px;
+}
+.landing-btn-cutclick h2 {
+    color: white;
+}
+.landing-btn-cutclick span {
+    color: white;
+}
+
+

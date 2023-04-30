@@ -1,0 +1,277 @@
+<!doctype html>
+<html dir="rtl">
+<head>
+    <title>Socket.IO chat</title>
+
+    <link href="../public/css/animate.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font: 13px Helvetica, Arial;
+        }
+
+        form {
+            background: #000;
+            padding: 3px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        form input {
+            border: 0;
+            padding: 10px;
+            width: 90%;
+            margin-right: .5%;
+        }
+
+        form button {
+            width: 9%;
+            background: rgb(130, 224, 255);
+            border: none;
+            padding: 10px;
+        }
+
+        #messages {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #messages li {
+            padding: 5px 10px;
+        }
+
+        #messages li:nth-child(odd) {
+            background: #eee;
+        }
+
+        #messages {
+            margin-bottom: 40px
+        }
+    </style>
+
+    <style>
+        .user-list {
+            position: fixed;
+            width: 280px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .user-list-box {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            background-color: #455A64;
+        }
+
+        .user-item {
+            background-color: #E0E0E0;
+            padding: 5px;
+            border-radius: 10px;
+            display: flex;
+            transition: 0.4s;
+            margin-bottom: 10px;
+        }
+
+        .user-item-avatar {
+            width: 60px;
+            height: 60px;
+        }
+
+        .user-item-avatar img {
+            width: 100%;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .user-item-name {
+            margin-right: 20px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            width: calc(100% - 280px);
+            margin-right: 280px;
+        }
+
+        .main-content-box {
+            padding: 10px;
+            width: 100%;
+            height: calc(100vh - 70px);
+        }
+
+        .footer-box {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            background-color: #455a64;
+            width: calc(100% - 280px);
+            height: 50px;
+            display: flex;
+        }
+
+        .footer-text-box {
+            width: calc(100% - 100px);
+        }
+
+        .footer-text-box input {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            outline: none;
+        }
+
+        .footer-send-box {
+            width: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="user-list">
+    <div class="user-list-box" id="users">
+
+        <div class="user-item" v-for="user in users">
+            <div class="user-item-avatar">
+                <img src="https://api.sabkino.com/uploads/files/defaultUser.jpg" >
+            </div>
+
+            <div class="user-item-name">
+                <div class="user-item-username">
+                    <span>نام :</span>
+                    <span>{{user.firstName}}</span>
+                </div>
+                <div class="user-item-family">
+                    <span>نام خانوادگی :</span>
+                    <span>{{user.lastName}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="main-content">
+    <div class="main-content-box">
+        <ul id="messages"></ul>
+
+        <div id="app">
+            <li v-for="user in users">
+                {{user.name}} - {{user.email}}
+            </li>
+        </div>
+    </div>
+
+
+    <div class="footer-box">
+        <div class="footer-text-box">
+            <input id="m" autocomplete="off"/>
+        </div>
+
+        <div class="footer-send-box">
+            <button>Send</button>
+        </div>
+    </div>
+</div>
+
+
+<br>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            users: [
+                {name: 'Foo Bar', email: 'foo@bar.com'},
+                {name: 'John Doh', email: 'john@doh.com'},
+                {name: 'John Doh', email: 'john@doh.com'},
+                {name: 'John Doh', email: 'john@doh.com'},
+                {name: 'John Doh', email: 'john@doh.com'},
+                {name: 'John Doh', email: 'john@doh.com'},
+                {name: 'John Doh', email: 'john@doh.com'},
+                {name: 'John Doh', email: 'john@doh.com'},
+                {name: 'John Doh', email: 'john@doh.com'},
+            ]
+        }
+    });
+
+    // var demo = new Vue({
+    //     el: '#demo',
+    //     data: {
+    //         parentMsg: 'Hello',
+    //         items: [
+    //             { childMsg: 'Foo' },
+    //             { childMsg: 'Bar' }
+    //         ]
+    //     }
+    // })
+
+
+</script>
+
+
+<script>
+    $(function () {
+        // let host = '192.186.1.80';
+        var socket = io();
+        // var io = require('socket.io-client');
+
+        // var socket = io.connect('//' + host + ':3000');
+        $('form').submit(function () {
+            socket.emit('chat message', $('#m').val(), 50);
+            $('#m').val('');
+            return false;
+        });
+
+
+        socket.on('chat message', function (msg) {
+            $('#messages').append($('<li>').text(msg));
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+
+        socket.on('show_log', function (msg) {
+            $('#messages').append($('<li>').text(msg));
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+
+
+        $('#accept').click(function () {
+            let m = $('#m').val();
+            socket.emit('accept order2', {
+                'order_id': m
+            });
+        });
+
+        socket.emit('user list');
+
+
+        socket.on('user list', function (data) {
+            console.log(data.userList);
+            new Vue({
+                el: '#users',
+                data: {
+                    users: data.userList
+                }
+            });
+        });
+
+    });
+</script>
+</body>
+</html>

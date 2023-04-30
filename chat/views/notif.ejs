@@ -1,0 +1,88 @@
+<!doctype html>
+<html dir="rtl">
+<head>
+    <title><%=title%></title>
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/sweetalert2.min.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/material.css" rel="stylesheet">
+</head>
+<body>
+<i class="mdi mdi-close-box"></i>
+<div class="main" id="main">
+
+    <button class="btn" id="btn">notif send</button>
+
+</div>
+
+<br>
+<script src="js/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<!--<script src="https://code.jquery.com/jquery-1.11.1.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="js/sweetalert2.min.js"></script>
+
+<script>
+    $(function () {
+        var own_user_id = '620e4a7b83888218223d56fd';
+        // let host = '192.186.1.80';
+        var socket = io();
+        // var io = require('socket.io-client');
+
+        // var socket = io.connect('//' + host + ':3000');
+        // $('form').submit(function () {
+        //     socket.emit('chat message', $('#m').val(), 50);
+        //     $('#m').val('');
+        //     return false;
+        // });
+
+
+        // // var user_id = '61f81e1f9088e35b0ccabadd';
+        // socket.on('chat message', function (msg) {
+        //     $('#messages').append($('<li>').text(msg));
+        //     window.scrollTo(0, document.body.scrollHeight);
+        // });
+
+        // socket.on('show_log', function (msg) {
+        //     $('#messages').append($('<li>').text(msg));
+        //     window.scrollTo(0, document.body.scrollHeight);
+        // });
+
+
+        $('#btn').click(function () {
+            socket.emit('notif', {
+                'data': 'test'
+            });
+        });
+
+        
+        socket.on('user list', function (data) {
+            console.log(data.userList);
+            new Vue({
+                el: '#users',
+                data: {
+                    users: data.userList
+                }
+            });
+        });
+        
+    
+
+        // $(document).on('click', '#userListItems .user-item', function () {
+        //     var id = $(this).data('id');
+        //     $('.user-item').removeClass('active');
+        //     $(this).addClass('active');
+        //     $('#select_user_id').val(id);
+
+        //     socket.emit('chat user list', {'user_id': id});
+        // });
+
+
+        // socket.emit('user joined', {
+        //     'user_id': own_user_id,
+        // });
+
+    });
+</script>
+</body>
+</html>

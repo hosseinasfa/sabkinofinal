@@ -1,0 +1,66 @@
+.btn_cancel {
+    border-radius: 10px;
+    padding: 5px 40px 5px 40px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.file-input {
+    display: flex;
+    border: 1px solid #cacaca;
+    align-items: center;
+}
+
+
+.file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.file-input label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 7px 10px 7px 10px;
+    margin: 0;
+    background-color: #000000;
+    border-left: 1px solid #cacaca;
+    text-align: center;
+}
+
+.file-name {
+    font-size: 1.2rem;
+    color: #555;
+    margin-right: 10px;
+    margin-top: 6px;
+    direction: ltr;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.file-input label:hover {
+    background-color: #ff5722;
+    color: white;
+}
+.file-input label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 7px 10px 7px 10px;
+    margin: 0;
+    background-color: #000000;
+    border-left: 1px solid #cacaca;
+    text-align: center;
+}

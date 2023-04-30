@@ -1,0 +1,359 @@
+section#top-main-box1 {
+    position: relative;
+    /* padding: 5rem; */
+    margin-bottom: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #ffffff;
+    border-top: 1px solid #dad8d8;
+    border-bottom: 1px solid #dad8d8;
+}
+.help-video {
+    width: 100%;
+    margin-top: 70px;
+}
+
+/*.help-video video {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+.mobile-video {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 573px;
+    display: block;
+    margin-top: 30px;
+}
+.mobile-video img {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    left: 0;
+    top: -10px;
+    background-color: black;
+    border-radius: 40px;
+}
+/*.mobile-video-content {*/
+/*    padding: 20px;*/
+/*}*/
+.help-video video {
+    width: calc(100% - 10px);
+    height: 100%;
+    border-radius: 20px;
+    z-index: 1 !important;
+    /* margin-top: 30px; */
+    display: block;
+    padding: 10px;
+    position: absolute;
+    top: -15px;
+    left: 0;
+}
+
+
+
+.app-download a {
+    display: inline-flex;
+    background-color: #ffffff;
+    border: 2px solid #58ba57;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.app-download a:hover {
+    background-color: #c8c8c8;
+}
+
+.app-download a span {
+    color: #2e8028;
+    margin-top: 5px;
+    font-family: 'aviny';
+    font-size: 1.7rem;
+}
+
+
+.oppi_banner.oppi_banner_two {
+    height: calc(100vh - 120px);
+}
+
+.banner_title {
+    color: white;
+    font-size: 0.9rem;
+    text-align: end;
+    /* margin-left: 50px; */
+    display: inline-block;
+    /* font-family: 'aviny'; */
+    font-weight: bold;
+}
+
+.bottom-item-title h1 {
+    color: #37474f;
+    font-family: 'aviny';
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-shadow: 2px 2px #00000040;
+}
+
+.bottom-item-list ul {
+    list-style: none;
+    padding: 0;
+    direction: rtl;
+}
+
+.bottom-item-list {
+    font-size: 1.7rem;
+    margin-left: 10px;
+    margin-right: 20px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.item.social_slider_screen_item.text-center {
+    margin-bottom: 80px;
+}
+
+
+section#top-main-box {
+    position: relative;
+    /* padding: 5rem; */
+    margin-bottom: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #ffffff;
+    border-top: 1px solid #dad8d8;
+    border-bottom: 1px solid #dad8d8;
+}
+
+.top-main-box {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.monitor-box {
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+}
+.monitor-box img {
+    width: 100%;
+}
+
+.home-box-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.box-item {
+    text-align: center;
+    margin-bottom: 70px;
+    background-color: #ffffff82;
+    position: relative;
+    margin-top: 40px;
+    /* padding: 1rem; */
+    /* border-radius: 5px; */
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
+    border-radius: 30px;
+    border: 1px solid #c1c1c1;
+}
+
+.box-item-title {
+    background-color: #263238bd;
+    height: 110px;
+    color: white;
+    margin-bottom: 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
+}
+
+.box-item-title h4 {
+    color: #ffffff;
+    /* margin-top: 61px; */
+    padding-top: 36px;
+    font-size: 2rem;
+    font-weight: normal;
+    font-family: 'aviny';
+}
+
+.box-item img {
+    width: 60px;
+}
+
+ul.plan-list {
+    list-style: none;
+    text-align: right;
+    font-size: 1.3rem;
+    margin-bottom: 100px;
+    font-family: 'aviny';
+    padding: 6px;
+}
+
+ul.plan-list li {
+    margin-bottom: 10px;
+}
+
+ul.plan-list li img {
+    width: 35px;
+    margin-left: 10px;
+    height: 32px;
+}
+
+.toolbar-price {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+}
+
+.price-box p {
+    text-decoration: line-through !important;
+    color: #E64A19;
+    font-size: 1.7rem;
+    font-family: 'aviny';
+}
+
+.discount-price-box p {
+    color: #2E7D32;
+    font-size: 2rem;
+    font-family: 'aviny';
+}
+
+.toolbar-button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.toolbar-button .btn {
+    width: 100%;
+    display: block;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: 'aviny';
+    font-size: 1.3rem;
+}
+
+.app-download-description.row {
+    margin-top: 70px;
+}
+
+.app-screen-shot-title {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: 'aviny';
+    color: #f33131;
+}
+
+.app-screen-shot-note p {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'aviny';
+    margin-top: 20px;
+}
+
+.app-description ul {
+    margin-top: 30px;
+    font-family: 'aviny';
+    font-size: 1.5rem;
+    text-align: right;
+    list-style: none;
+    padding: 0;
+}
+
+.app-description ul li i {
+    color: #8a8989;
+}
+
+.app-description ul li span {
+    margin-right: 10px;
+}
+
+.app-download {
+    margin-top: 30px;
+    /* margin-right: 50px; */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.app-download a img {
+    width: 60px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.app-download .disabled {
+    position: relative;
+    display: inline-block;
+}
+
+.app-download .disabled span {
+    position: absolute;
+    width: 100%;
+    top: calc(100% - 17px);
+    left: 4px;
+    color: #666666;
+    font-family: 'aviny';
+    font-size: 1.4rem;
+}
+
+
+.about-title {
+    margin-bottom: 20px;
+}
+
+.about-left-side {
+    padding: 15px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    /*text-align: justify;*/
+}
+
+.footer-title {
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-icon img {
+    width: 80px;
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-us-item i {
+    background-color: #0277bd;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 37px;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    color: white;
+}
+
+.full-width p {
+    text-align: center;
+    margin-top: 20px;
+}

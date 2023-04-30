@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جزیات کتاب</title>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+
+    <style>
+        body {
+            direction: rtl;
+        }
+
+        .publisher-image {
+            width: 100%;
+        }
+
+        .publisher-image img {
+            width: 100%;
+        }
+
+        .publisher-title-bar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .publisher-title h1 {
+            font-size: 20px;
+        }
+
+        .publisher-price {
+            font-size: 15px;
+            margin-top: 15px;
+            color: red;
+        }
+
+        .publisher-detail {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .publisher-detail-item {
+            position: relative;
+            border: 1px solid #838383;
+            border-radius: 5px;
+            padding: 8px;
+        }
+
+        .publisher-detail-item-title {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+
+        .publisher-detail-item-content {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .btn-box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-back {
+            color: white;
+            background-color: #4CAF50;
+            padding: 20px 40px 20px 40px;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        @font-face {
+            font-family: 'IRANSans';
+            src: url(https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.eot);
+            src: url('https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.eot?#iefix') format('embedded-opentype'), url(https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.woff2) format('woff2'), url(https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.woff) format('woff'), url(https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.ttf) format('truetype'), url('https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.svg#IRANSansWebFaNum') format('svg');
+            font-weight: 400;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: "aviny";
+            src: url(https://api.sabkino.com/fonts/aviny/aviny.ttf) format('truetype')
+        }
+
+        @font-face {
+            font-family: 'Yekan';
+            src: url(https://api.sabkino.com/fonts/byekan/Yekan.eot);
+            src: url('https://api.sabkino.com/fonts/byekan/Yekan.eot?#iefix') format('embedded-opentype'), url(https://api.sabkino.com/fonts/byekan/Yekan.woff2) format('woff2'), url(https://api.sabkino.com/fonts/byekan/Yekan.woff) format('woff'), url(https://api.sabkino.com/fonts/byekan/Yekan.otf) format('opentype'), url(https://api.sabkino.com/fonts/byekan/Yekan.ttf) format('truetype'), url('https://api.sabkino.com/fonts/byekan/Yekan.svg#Yekan') format('svg');
+            font-weight: 400;
+            font-style: normal
+        }
+
+        body,
+        body * {
+            font-family: 'IRANSans';
+        }
+
+        i {
+            font-family: 'Material Design Icons';
+        }
+
+        .publisher-rate-box {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .publisher-rate-title i {
+            font-size: 25px;
+            color: #ffc619;
+        }
+
+        .publisher-hardship-box {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .publisher-hardship-title i {
+            font-size: 25px;
+            color: #ff0909;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="publisher-item">
+            <div class="publisher-image">
+                <img src="<%= data.avatar %>">
+            </div>
+
+            <div class="publisher-title-bar">
+                <div class="publisher-title">
+                    <h1>
+                        <% if(data.title!=null){ %>
+                            <%= data.title %>
+                                <%}%>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="publisher-detail">
+
+            </div>
+
+            <div class="publisher-detail-description">
+                <p>
+                    <% if(data.caption!=null){ %>
+                        <%= data.caption %>
+                            <%}%>
+                </p>
+            </div>
+
+            <div class="publisher-hastag">
+                <div class="publisher-hashtag-title">
+                    <h3>هشتگ های این سری</h3>
+                </div>
+
+                <div class="publisher-hashtag-item">
+                    <p>
+                        <% if(data.hashtag!=null){ %>
+                            <%= data.hashtag %>
+                                <%}%>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="publisher-rate">
+                <div class="publisher-rate-box">
+                    <div class="publisher-rate-title">
+                        <span>امتیاز</span>
+                    </div>
+
+
+                    <div class="publisher-rate-title">
+                        <% if(Math.ceil(data.bookRate==0)){ %>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <% } else if(Math.ceil(data.bookRate==1)){ %>
+                                <i class="mdi mdi-star"></i>
+                                <i class="mdi mdi-star-outline"></i>
+                                <i class="mdi mdi-star-outline"></i>
+                                <i class="mdi mdi-star-outline"></i>
+                                <i class="mdi mdi-star-outline"></i>
+                                <% } else if(Math.ceil(data.bookRate==2)){ %>
+                                    <i class="mdi mdi-star"></i>
+                                    <i class="mdi mdi-star"></i>
+                                    <i class="mdi mdi-star-outline"></i>
+                                    <i class="mdi mdi-star-outline"></i>
+                                    <i class="mdi mdi-star-outline"></i>
+
+                                    <% } else if(Math.ceil(data.bookRate==3)){ %>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star-outline"></i>
+                                        <i class="mdi mdi-star-outline"></i>
+
+                                        <% } else if(Math.ceil(data.bookRate==4)){ %>
+                                            <i class="mdi mdi-star"></i>
+                                            <i class="mdi mdi-star"></i>
+                                            <i class="mdi mdi-star"></i>
+                                            <i class="mdi mdi-star"></i>
+                                            <i class="mdi mdi-star-outline"></i>
+
+                                            <% } else if(Math.ceil(data.bookRate==5)){ %>
+                                                <i class="mdi mdi-star"></i>
+                                                <i class="mdi mdi-star"></i>
+                                                <i class="mdi mdi-star"></i>
+                                                <i class="mdi mdi-star"></i>
+                                                <i class="mdi mdi-star"></i>
+                                                <%}%>
+
+                    </div>
+                </div>
+
+
+                <div class="publisher-hardship-box">
+                    <div class="publisher-hardship-title">
+                        <span>سختی</span>
+                    </div>
+
+                    <div class="publisher-hardship-title">
+                        <% if(Math.ceil(data.hardRate==0)){ %>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <% } else if(Math.ceil(data.hardRate==1)){ %>
+                                <i class="mdi mdi-star"></i>
+                                <i class="mdi mdi-star-outline"></i>
+                                <i class="mdi mdi-star-outline"></i>
+                                <i class="mdi mdi-star-outline"></i>
+                                <i class="mdi mdi-star-outline"></i>
+                                <% } else if(Math.ceil(data.hardRate==2)){ %>
+                                    <i class="mdi mdi-star"></i>
+                                    <i class="mdi mdi-star"></i>
+                                    <i class="mdi mdi-star-outline"></i>
+                                    <i class="mdi mdi-star-outline"></i>
+                                    <i class="mdi mdi-star-outline"></i>
+
+                                    <% } else if(Math.ceil(data.hardRate==3)){ %>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star-outline"></i>
+                                        <i class="mdi mdi-star-outline"></i>
+
+                                        <% } else if(Math.ceil(data.hardRate==4)){ %>
+                                            <i class="mdi mdi-star"></i>
+                                            <i class="mdi mdi-star"></i>
+                                            <i class="mdi mdi-star"></i>
+                                            <i class="mdi mdi-star"></i>
+                                            <i class="mdi mdi-star-outline"></i>
+
+                                            <% } else if(Math.ceil(data.hardRate==5)){ %>
+                                                <i class="mdi mdi-star"></i>
+                                                <i class="mdi mdi-star"></i>
+                                                <i class="mdi mdi-star"></i>
+                                                <i class="mdi mdi-star"></i>
+                                                <i class="mdi mdi-star"></i>
+                                                <%}%>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="btn-box">
+        <!-- <a href="intent:#Intent;action=com.appopenfromweb.sabkino;category=android.intent.category.DEFAULT;category=android.intent.category.BROWSABLE;S.msg_from_browser=Launched%20from%20Browser;end';"
+            type="button" class="btn-back">
+            بازگشت به برنامه
+        </a> -->
+
+        <a href="com.appopenfromweb.sabkinopublisherseries://open?publisherSeriesId=<%=data._id%>" type="button"
+            class="btn-back">
+            بازگشت به برنامه
+        </a>
+    </div>
+</body>
+
+</html>

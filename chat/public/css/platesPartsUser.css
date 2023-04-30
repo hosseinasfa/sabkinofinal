@@ -1,0 +1,155 @@
+@media print {
+    @page {
+        /*size: A4 !important;*/
+        size: ISO A4 portrait !important;
+        margin: 5mm 5mm 5mm 5mm !important;
+
+        padding: 5px !important;
+    }
+
+    body {
+        /* this affects the margin on the content before sending to printer */
+        margin: 5px !important;
+        padding: 5px !important;
+    }
+}
+
+.image-box {
+    text-align: center;
+}
+
+.td-ltr {
+    direction: ltr !important;
+}
+
+.image-box .image-header {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+}
+
+.image-box img {
+    width: 250px;
+}
+
+body {
+    background: none !important;
+}
+
+.edge-a span {
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 5px);
+}
+
+.edge-a {
+    width: 44px;
+    height: 44px;
+    border: 1px solid black;
+    border-top: 5px solid black;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edge-b span {
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 4px;
+}
+
+.edge-b {
+    width: 44px;
+    height: 44px;
+    border: 1px solid black;
+    border-right: 5px solid black;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edge-c span {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 5px);
+}
+
+.edge-c {
+    width: 44px;
+    height: 44px;
+    border: 1px solid black;
+    border-bottom: 5px solid black;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edge-d span {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 4px;
+}
+
+.edge-d {
+    width: 44px;
+    height: 44px;
+    border: 1px solid black;
+    border-left: 5px solid black;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button.print:hover {
+    border-color: white;
+    background-color: #ff5722;
+    color: white;
+}
+
+button.print {
+    border: 1px solid #ff5722;
+    position: relative;
+    /* top: 10px; */
+    /* left: 15px; */
+    padding: 5px 40px 5px 40px;
+    color: #ff5722;
+    background-color: white;
+    font-size: 10vw;
+    transition: 0.7s;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* width: 80%; */
+    /* height: 80%; */
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+button.print i {
+    font-size: 30.5vw;
+}
+
+p.header-title {
+    font-size: 4.5vw;
+    color: #546E7A;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.description-data {
+    height: 200px;
+}

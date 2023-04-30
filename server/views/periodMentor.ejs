@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دوره</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+
+    <link rel="icon" href="https://api.sabkino.com/assets/images/favicon-80x80.png" sizes="32x32" />
+    <link rel="icon" href="https://api.sabkino.com/assets/images/favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://api.sabkino.com/assets/images/favicon.png" />
+
+    <style>
+        body {
+            direction: rtl;
+        }
+
+        .btn-box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-back {
+            color: white;
+            background-color: #4CAF50;
+            padding: 20px 40px 20px 40px;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        @font-face {
+            font-family: 'IRANSans';
+            src: url(https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.eot);
+            src: url('https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.eot?#iefix') format('embedded-opentype'), url(https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.woff2) format('woff2'), url(https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.woff) format('woff'), url(https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.ttf) format('truetype'), url('https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.svg#IRANSansWebFaNum') format('svg');
+            font-weight: 400;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: "aviny";
+            src: url(https://api.sabkino.com/fonts/aviny/aviny.ttf) format('truetype')
+        }
+
+        @font-face {
+            font-family: 'Yekan';
+            src: url(https://api.sabkino.com/fonts/byekan/Yekan.eot);
+            src: url('https://api.sabkino.com/fonts/byekan/Yekan.eot?#iefix') format('embedded-opentype'), url(https://api.sabkino.com/fonts/byekan/Yekan.woff2) format('woff2'), url(https://api.sabkino.com/fonts/byekan/Yekan.woff) format('woff'), url(https://api.sabkino.com/fonts/byekan/Yekan.otf) format('opentype'), url(https://api.sabkino.com/fonts/byekan/Yekan.ttf) format('truetype'), url('https://api.sabkino.com/fonts/byekan/Yekan.svg#Yekan') format('svg');
+            font-weight: 400;
+            font-style: normal
+        }
+
+        body,
+        body * {
+            font-family: 'IRANSans';
+        }
+
+
+        .mentor-info-image {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mentor-info-image img {
+            width: 130px;
+            border-radius: 50%;
+        }
+
+        .mentor-info-name {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .mentor-info-stage {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+
+        .mentor-info-stage-title h3 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .mentor-info-stage-content {
+            font-size: 16px;
+            /* margin-top: 18px; */
+            margin-right: 10px;
+        }
+
+
+        .mentor-info-field {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .mentor-info-field-title h3 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .mentor-info-field-content {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+
+        .mentor-rate {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .mentor-rate-content i {
+            color: #FFC107;
+        }
+
+        .period-info {
+            margin-top: 30px;
+        }
+
+        .period-info-title-box {
+            border: 1px solid #bdbdbd;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .period-info-title {
+            border-bottom: 1px solid #BDBDBD;
+            margin-bottom: 10px;
+            line-height: 36px;
+        }
+
+        .period-info-detail {
+            margin-top: 30px;
+            border: 1px solid #BDBDBD;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .period-info-detail-session-title {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .period-info-detail-session-content {
+            border: 1px solid #bdbdbd;
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
+            text-align: center;
+            line-height: 75px;
+            margin-top: 10px;
+        }
+
+        .period-info-detail-duration-title {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .period-info-detail-duration-content {
+            border: 1px solid #bdbdbd;
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
+            text-align: center;
+            line-height: 75px;
+            margin-top: 10px;
+        }
+
+        .period-info-detail-stage-title {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .period-info-detail-stage-content {
+            border: 1px solid #bdbdbd;
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
+            text-align: center;
+            line-height: 75px;
+            margin-top: 10px;
+        }
+
+        .period-info-detail-price-title {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .period-info-detail-price-content {
+            border: 1px solid #bdbdbd;
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
+            text-align: center;
+            line-height: 75px;
+            margin-top: 10px;
+        }
+
+        .period-preview video {
+            width: 100%;
+        }
+
+        .period-preview {
+            margin-top: 20px;
+        }
+
+        .period-rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .period-rate-content i {
+            color: #FFC107;
+        }
+
+        .period-extra {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .btn-header {
+            color: white;
+            background-color: #00695C;
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid;
+        }
+
+        .btn-description {
+            color: white;
+            background-color: #00695C;
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="mentor-info">
+            <div class="mentor-info-image">
+                <img src="<%=data.userId.avatar%>">
+            </div>
+
+            <div class="mentor-info-name">
+                <span>
+                    <%= data.userId.firstName + " " + data.userId.lastName%>
+                </span>
+            </div>
+
+            <div class="mentor-info-stage">
+                <div class="mentor-info-stage-title">
+                    <h3>آخرین مدرک تحصیلی </h3>
+                </div>
+
+                <div class="mentor-info-stage-content">
+                    <span>
+                        <%= data.educationalStageId.title%>
+                    </span>
+                </div>
+            </div>
+
+            <div class="mentor-info-field">
+                <div class="mentor-info-field-title">
+                    <h3>رشته تحصیلی</h3>
+                </div>
+
+                <div class="mentor-info-field-content">
+                    <span>
+                        <%= data.userId.uniEducationField%>
+                    </span>
+                </div>
+            </div>
+
+            <div class="mentor-rate">
+                <div class="mentor-rate-title">
+                    امتیاز بخش دوره آنلاین
+                </div>
+
+                <div class="mentor-rate-content">
+                    <span>(<%= data.rate %>)</span>
+
+                    <% if(Math.ceil(data.rate==0)) {%>
+                        <i class="mdi mdi-star-outline"></i>
+                        <i class="mdi mdi-star-outline"></i>
+                        <i class="mdi mdi-star-outline"></i>
+                        <i class="mdi mdi-star-outline"></i>
+                        <i class="mdi mdi-star-outline"></i>
+                        <%} else if(Math.ceil(data.rate==1)) {%>
+                            <i class="mdi mdi-star"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <%} else if(Math.ceil(data.rate==2)) {%>
+                                <i class="mdi mdi-star"></i>
+                                <i class="mdi mdi-star"></i>
+                                <i class="mdi mdi-star-outline"></i>
+                                <i class="mdi mdi-star-outline"></i>
+                                <i class="mdi mdi-star-outline"></i>
+                                <%} else if(Math.ceil(data.rate==3)) {%>
+                                    <i class="mdi mdi-star"></i>
+                                    <i class="mdi mdi-star"></i>
+                                    <i class="mdi mdi-star"></i>
+                                    <i class="mdi mdi-star-outline"></i>
+                                    <i class="mdi mdi-star-outline"></i>
+
+                                    <%} else if(Math.ceil(data.rate==4)) {%>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star-outline"></i>
+                                        <%} else if(Math.ceil(data.rate==5)) {%>
+                                            <i class="mdi mdi-star"></i>
+                                            <i class="mdi mdi-star"></i>
+                                            <i class="mdi mdi-star"></i>
+                                            <i class="mdi mdi-star"></i>
+                                            <i class="mdi mdi-star"></i>
+                                            <%}%>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="period-info">
+            <div class="period-info-title-box">
+                <div class="period-info-title">
+                    <span>نام دوره</span>
+                </div>
+
+                <div class="period-info-title-content">
+                    <span>
+                        <%=data.name %>
+                    </span>
+                </div>
+            </div>
+
+
+
+            <div class="period-info-detail">
+                <div class="period-info-detail-session">
+                    <div class="period-info-detail-session-title">
+                        <span>تعداد جلسات</span>
+                    </div>
+
+                    <div class="period-info-detail-session-content">
+                        <span>
+                            <%=data.sessionCount %>
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="period-info-detail-duration">
+                    <div class="period-info-detail-duration-title">
+                        <span>مدت زمان</span>
+                    </div>
+
+                    <div class="period-info-detail-duration-content">
+                        <span>
+                            <%= data.duration%>
+                        </span>
+                    </div>
+                </div>
+
+
+
+                <div class="period-info-detail-stage">
+                    <div class="period-info-detail-stage-title">
+                        <span>پایه</span>
+                    </div>
+
+                    <div class="period-info-detail-stage-content">
+                        <span>
+                            <%= data.educationalStageId.title%>
+                        </span>
+                    </div>
+                </div>
+
+
+
+                <div class="period-info-detail-price">
+                    <div class="period-info-detail-price-title">
+                        <span>قیمت (تومان)</span>
+                    </div>
+
+                    <div class="period-info-detail-price-content">
+                        <span>
+                            <%= data.price%>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="period-preview">
+            <video width="320" height="240" controls>
+                <source src="https://api.sabkino.com/uploads/period_media_video/<%= data.video %>" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="period-rate">
+            <div class="period-rate-title">
+                امتیاز شرکت کنندگان در دوره
+            </div>
+
+            <div class="period-rate-content">
+                <span>(<%=data.rate%>)</span>
+                <% if(Math.ceil(data.rate==0)) {%>
+                    <i class="mdi mdi-star-outline"></i>
+                    <i class="mdi mdi-star-outline"></i>
+                    <i class="mdi mdi-star-outline"></i>
+                    <i class="mdi mdi-star-outline"></i>
+                    <i class="mdi mdi-star-outline"></i>
+                    <%} else if(Math.ceil(data.rate==1)) {%>
+                        <i class="mdi mdi-star"></i>
+                        <i class="mdi mdi-star-outline"></i>
+                        <i class="mdi mdi-star-outline"></i>
+                        <i class="mdi mdi-star-outline"></i>
+                        <i class="mdi mdi-star-outline"></i>
+                        <%} else if(Math.ceil(data.rate==2)) {%>
+                            <i class="mdi mdi-star"></i>
+                            <i class="mdi mdi-star"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <i class="mdi mdi-star-outline"></i>
+                            <%} else if(Math.ceil(data.rate==3)) {%>
+                                <i class="mdi mdi-star"></i>
+                                <i class="mdi mdi-star"></i>
+                                <i class="mdi mdi-star"></i>
+                                <i class="mdi mdi-star-outline"></i>
+                                <i class="mdi mdi-star-outline"></i>
+
+                                <%} else if(Math.ceil(data.rate==4)) {%>
+                                    <i class="mdi mdi-star"></i>
+                                    <i class="mdi mdi-star"></i>
+                                    <i class="mdi mdi-star"></i>
+                                    <i class="mdi mdi-star"></i>
+                                    <i class="mdi mdi-star-outline"></i>
+                                    <%} else if(Math.ceil(data.rate==5)) {%>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star"></i>
+                                        <i class="mdi mdi-star"></i>
+                                        <%}%>
+            </div>
+
+        </div>
+
+        <div class="period-extra">
+            <button class="btn-header">سرفصل ها</button>
+            <button class="btn-description">توضیحات</button>
+        </div>
+
+
+        <div class="btn-box">
+            <!-- <a href="intent:#Intent;action=com.appopenfromweb.sabkino;category=android.intent.category.DEFAULT;category=android.intent.category.BROWSABLE;S.msg_from_browser=Launched%20from%20Browser;end'
+                            ;" type="button" class="btn-back">
+                بازگشت به برنامه
+            </a> -->
+
+
+            <a href="com.appopenfromweb.sabkinoperiod://open?periodId=<%=data._id%>&mentorId=<%=data.userId._id%>"
+                type="button" class="btn-back">
+                بازگشت به برنامه
+            </a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+.button-modal-box {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+.button-modal-box .btn {
+    width: 33%;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-modal-box .btn i {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.button-modal-box .btn span {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

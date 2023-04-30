@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جزیات محصول</title>
+
+    <style>
+        body {
+            direction: rtl;
+        }
+
+        .product-image {
+            width: 100%;
+        }
+
+        .product-image img {
+            width: 100%;
+        }
+
+        .product-title-bar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .product-title h1 {
+            font-size: 20px;
+        }
+
+        .product-price {
+            font-size: 15px;
+            margin-top: 15px;
+            color: red;
+        }
+
+        .product-detail {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .product-detail-item {
+            position: relative;
+            border: 1px solid #838383;
+            border-radius: 5px;
+            padding: 8px;
+        }
+
+        .product-detail-item-title {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+
+        .product-detail-item-content {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .btn-box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-back {
+            color: white;
+            background-color: #4CAF50;
+            padding: 20px 40px 20px 40px;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        @font-face {
+            font-family: 'IRANSans';
+            src: url(https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.eot);
+            src: url('https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.eot?#iefix') format('embedded-opentype'), url(https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.woff2) format('woff2'), url(https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.woff) format('woff'), url(https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.ttf) format('truetype'), url('https://api.sabkino.com/fonts/ir_sans_fanum/IRANSansWebFaNum.svg#IRANSansWebFaNum') format('svg');
+            font-weight: 400;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: "aviny";
+            src: url(https://api.sabkino.com/fonts/aviny/aviny.ttf) format('truetype')
+        }
+
+        @font-face {
+            font-family: 'Yekan';
+            src: url(https://api.sabkino.com/fonts/byekan/Yekan.eot);
+            src: url('https://api.sabkino.com/fonts/byekan/Yekan.eot?#iefix') format('embedded-opentype'), url(https://api.sabkino.com/fonts/byekan/Yekan.woff2) format('woff2'), url(https://api.sabkino.com/fonts/byekan/Yekan.woff) format('woff'), url(https://api.sabkino.com/fonts/byekan/Yekan.otf) format('opentype'), url(https://api.sabkino.com/fonts/byekan/Yekan.ttf) format('truetype'), url('https://api.sabkino.com/fonts/byekan/Yekan.svg#Yekan') format('svg');
+            font-weight: 400;
+            font-style: normal
+        }
+
+        body,
+        body * {
+            font-family: 'IRANSans';
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="product-item">
+            <div class="product-image">
+                <img src="<%= data.avatar %>">
+            </div>
+
+            <div class="product-title-bar">
+                <div class="product-title">
+                    <h1>
+                        <%= data.title %>
+                    </h1>
+                </div>
+                <div class="product-price">
+                    <span>
+                        <%= data.price %> ریال
+                    </span>
+                </div>
+            </div>
+
+            <div class="product-detail">
+                <div class="product-detail-item">
+                    <div class="product-detail-item-title">
+                        <span>نویسنده</span>
+                    </div>
+
+                    <div class="product-detail-item-content">
+                        <span>
+                            <%= data.author %>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="product-detail-item">
+                    <div class="product-detail-item-title">
+                        <span>پایه</span>
+                    </div>
+
+                    <div class="product-detail-item-content">
+                        <span>
+                            <%= data.author %>
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="product-detail-item">
+                    <div class="product-detail-item-title">
+                        <span>رشته</span>
+                    </div>
+
+                    <div class="product-detail-item-content">
+                        <span>
+                            <%= data.author %>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="product-detail-item">
+                    <div class="product-detail-item-title">
+                        <span>درس</span>
+                    </div>
+
+                    <div class="product-detail-item-content">
+                        <span>
+                            <%= data.titleLesson %>
+                        </span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="product-detail-description">
+                <p>
+                    <%= data.caption %>
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="btn-box">
+        <!-- <a href="intent:#Intent;action=com.appopenfromweb.sabkinoproduct;category=android.intent.category.DEFAULT;category=android.intent.category.BROWSABLE;S.msg_from_browser=Launched%20from%20Browser;end';" type="button"
+    class="btn-back">
+        بازگشت به برنامه
+    </a> -->
+        <a href="com.appopenfromweb.sabkinoproduct://open?productId=<%=data._id%>" type="button" class="btn-back">
+            بازگشت به برنامه
+        </a>
+    </div>
+</body>
+
+</html>

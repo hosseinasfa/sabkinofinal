@@ -1,0 +1,123 @@
+ul.access-list {
+    list-style: none;
+    padding: 0;
+}
+
+.access-header {
+    text-align: center;
+    font-family: 'aviny';
+    font-size: 3rem;
+    border-bottom: 1px solid #9d9d9d;
+    padding-bottom: 20px;
+}
+
+ul.access-list ul {
+    list-style: none;
+}
+
+.container-checkbox {
+    display: block;
+    position: relative;
+    padding-right: 35px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+span.checkbox-title {
+    font-size: 2.4rem;
+    font-family: 'aviny';
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 1px solid #867c7c;
+    border-radius: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked ~ .checkmark {
+    background-color: #ff5722;
+    border: 1px solid #ff5722;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.social-icon i {
+    position: absolute;
+    left: 18px;
+    top: 3px;
+    background-color: #e4e4e4;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    line-height: 24px;
+    color: #636363;
+    border-radius: 5px;
+}
+.social-icon input {
+    text-align: left;
+    padding-left: 30px;
+    direction: ltr;
+}
+
+.tooltip-arrow, .tooltip > .tooltip-inner {
+    font-size: 1.2rem;
+!important;
+}
+
+.auth_left {
+    width: 100% !important;
+}
+
+.auth_left form {
+    width: 100% !important;
+}
+

@@ -1,0 +1,27 @@
+.sms-attention i {
+    color: #ffa000;
+}
+
+.social-icon i {
+    position: absolute;
+    left: 18px;
+    top: 3px;
+    background-color: #e4e4e4;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    line-height: 24px;
+    color: #636363;
+    border-radius: 5px;
+}
+
+.social-icon input {
+    text-align: left;
+    padding-left: 30px;
+    direction: ltr;
+}
+
+.tooltip-arrow, .tooltip > .tooltip-inner {
+    font-size: 1.2rem;
+!important;
+}

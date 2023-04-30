@@ -1,0 +1,23 @@
+var express = require('express');
+const controller = require('../controller/api/userNumber');
+const {isExistToken, isActiveUser, isDeleteUser, isExistUser} = require('../middleware/api');
+var checkAuth = [isExistToken, isExistUser, isActiveUser, isDeleteUser];
+var router = express.Router();
+const response = require('../response');
+const config = require('../config.js');
+var bodyParser = require('body-parser');
+
+router.post('/setUserPhone', controller.POST_USER_PHONE);
+router.get('/:itemId', checkAuth, controller.GET_EACH_ITEM);
+router.put('/:itemId', checkAuth, controller.PUT_EACH_ITEM);
+router.put('/:itemId/active', checkAuth, controller.PUT_ITEM_ACTIVE);
+router.put('/:itemId/deActive', checkAuth, controller.PUT_ITEM_DE_ACTIVE);
+router.get('/', checkAuth, controller.GET_ALL_ITEMS);
+router.post('/', checkAuth, controller.POST_ITEM);
+router.post('/Test',(req,res,next)=>{
+    res.send(200,'Test Response');
+    next()
+})
+module.exports = router;
+
+

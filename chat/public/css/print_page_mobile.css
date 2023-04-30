@@ -1,0 +1,205 @@
+@media print {
+    .print-content {
+        display: block !important;
+    }
+    .green-text
+    {
+        color: green !important;
+    }
+
+    button.print
+    {
+        display: none !important;
+    }
+
+    p.header-title
+    {
+        display: none!important;
+    }
+
+    .table-header {
+        color: black !important;
+        font-size: 2rem;
+    }
+
+    .table_main_header {
+        text-align: center !important;
+        width: fit-content !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 5px 10px 5px 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    table.table tr td {
+        border: 1px solid black !important;
+        background-color: white !important;
+        color: black !important;
+    }
+
+    .td-right {
+        text-align: right;
+    }
+
+    @page {
+        /*size: A4;*/
+        /*size: portrait;*/
+        /*orientation:landscape;*/
+        /*margin: 15mm 15mm 15mm 15mm;*/
+        /*padding: 15px;*/
+    }
+
+    body {
+        /* this affects the margin on the content before sending to printer */
+        margin: 0px !important;
+        padding: 0px !important;
+        height: fit-content !important;
+        width: auto !important;
+        position: relative;
+        background: none !important;
+
+        min-height: fit-content !important;
+        direction: rtl !important;
+        font-family: 'IRANSans' !important;
+    }
+
+
+    #printable {
+        position: relative;
+        height: 100vh;
+    }
+
+    .main-logo {
+        width: 100px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .main-logo img {
+        width: 100% !important;
+        /*border-radius: 15px !important;*/
+    }
+
+    .fade-logo {
+        width: 100px;
+        /*position: absolute !important;*/
+        /*left: 0 !important;*/
+        /*bottom: 0px !important;*/
+        margin-left: 0 !important;
+        /*text-align: left; */
+        margin-right: auto !important;
+        text-align: center;
+    }
+
+    .fade-logo img {
+        width: 50% !important;
+    }
+
+    .fade-logo h3 {
+        font-size: 11px !important;
+        margin-top: 10px !important;
+        line-height: 16px !important;
+        color: #37474f !important;
+    }
+
+}
+
+
+table.table tr td {
+    border: 1px solid white;
+    background-color: #6a6765;
+    color: white;
+}
+
+.td-right {
+    text-align: right;
+}
+
+.print-content {
+    display: none;
+}
+
+.item-content {
+    background-color: #4e4d4d;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 1px solid white;
+}
+
+.item-content.no-radius {
+    border-radius: 0 !important;
+}
+
+
+.table_main_header {
+    text-align: center;
+    background-color: #ffffff;
+    /* padding: .1rem; */
+    margin-top: 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.table_main_header h4 {
+    font-size: 1.5rem;
+}
+
+.item-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-field {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    /* margin-bottom: 10px; */
+    /* margin-top: 5px; */
+    border-left: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px;
+    /* margin-left: 10px; */
+    /* background-color: #4e4d4d; */
+    color: white;
+}
+
+.item-data {
+    margin-right: 10px;
+}
+
+.item-field:last-child {
+    margin-left: 0;
+    border-left: 0;
+}
+
+button.print:hover {
+    border-color: white;
+    background-color: #ff5722;
+    color: white;
+}
+
+button.print {
+    border: 1px solid #ffffff;
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    padding: 5px 7px 3px 7px;
+    color: #ffffff;
+    background-color: #5d5d5d;
+    font-size: 1.7rem;
+    transition: 0.7s;
+}
+
+.description-data {
+    height: 200px;
+}
+.green-text
+{
+    color: green !important;
+}

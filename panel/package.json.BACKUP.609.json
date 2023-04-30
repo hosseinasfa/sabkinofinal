@@ -1,0 +1,51 @@
+{
+  "name": "padide-service-panel",
+  "version": "0.0.1",
+  "description": "پنل مدیریت سبکی نو",
+  "productName": "پنل مدیریت سبکی نو",
+  "author": "pouya_azi <javad007foxbox@gmail.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@johmun/vue-tags-input": "^2.1.0",
+    "@quasar/extras": "^1.0.0",
+    "@quasar/quasar-ui-qcalendar": "^3.3.5",
+    "@voerro/vue-tagsinput": "^2.4.3",
+    "axios": "^0.18.1",
+    "core-js": "^3.6.5",
+    "echarts": "^5.0.0",
+    "moment": "^2.29.3",
+    "persian-date": "^1.1.0",
+    "quasar": "^1.0.0",
+    "socket.io-client": "^3.0.4",
+<<<<<<< HEAD
+    "vue-echarts-v3": "^2.0.1",
+    "vue-excel-xlsx": "^1.2.2"
+=======
+    "vue-echarts-v3": "^2.0.1"
+>>>>>>> 5f34a53e3f29d557ce163e22aa5322e5f642434c
+  },
+  "devDependencies": {
+    "@quasar/app": "^2.0.0",
+    "strip-ansi": "^3.0.1",
+    "workbox-webpack-plugin": "^5.1.4"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

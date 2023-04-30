@@ -1,0 +1,187 @@
+#installment-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0px 0px 0px;
+}
+
+.btn-installment-payment:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #515151;
+}
+
+
+.installment-box-item {
+    width: calc(50% - 20px);
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    justify-content: space-between;
+}
+
+.installment-box-item-content {
+    width: 60%;
+}
+
+.installment-box-item-title img {
+    display: none;
+}
+
+.installment-box-item-title h4 {
+    font-family: 'aviny';
+    font-size: 2.8rem;
+    margin-right: 30px;
+    color: #000000;
+}
+
+.installment-box-item-details {
+    min-height: 170px;
+}
+
+ul.plan-list {
+    list-style: none;
+    text-align: right;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-family: 'aviny';
+    padding-right: 10px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 40px 0px;
+    width: calc(100% - 20px);
+}
+
+ul.plan-list li {
+    background-color: #5151511a;
+    text-align: right;
+    margin-top: 10px;
+    color: #253439;
+    border-radius: 7px;
+    padding: 3px 15px 3px 15px;
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0px 10px 10px 0px;
+}
+
+ul.plan-list li span {
+    font-size: 2.5rem;
+}
+
+.installment-box-item-image {
+    width: 35%;
+    margin: 20px 10px 0px 0px;
+    position: relative;
+}
+
+.installment-box-item-image img {
+    width: 100%;
+}
+
+.payment-btn {
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+}
+
+.btn-installment-payment {
+    background-color: #43A047;
+    color: #fff;
+    padding: 10px 30px 10px 30px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+ul.plan-list li span:last-child {
+    background-color: #515151;
+    width: 170px;
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+    border-radius: 54px;
+}
+
+.payment-price {
+    padding: 10px;
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    color: #455a64;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    font-family: 'aviny';
+    font-size: 1.9rem;
+    width: 200px;
+    display: flex;
+}
+
+.payment-price span:last-child {
+    background-color: #515151;
+    padding: 0px 10px 0px 10px;
+    border-radius: 10px;
+    margin: 0px 5px 0px 0px;
+    color: white;
+    width: 79px;
+    display: block;
+    text-align: center;
+}
+
+.installment-box-item.deactive:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .7;
+    border-radius: 19px;
+    width: 100%;
+    height: 100%;
+}
+
+.installment-box-item.deactive:before {
+    content: 'به زودی';
+    position: absolute;
+    color: white;
+    z-index: 1;
+    font-family: 'aviny';
+    font-size: 2rem;
+    background-color: #7d7d7d;
+    padding: 0px 20px 0px 20px;
+    border-radius: 5px;
+    right: 220px;
+}
+
+.btn-installment-payment-active:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-installment-payment-active {
+    background-color: #43a047;
+    color: #fff;
+    padding: 10px 30px 10px 30px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+img.module-image {
+    position: absolute;
+    bottom: 110px;
+    right: -50px;
+    width: 120px;
+}

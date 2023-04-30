@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%=title%></title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style>
+        body {
+            margin-top: 20px;
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: Shabnam;
+            src: url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.eot');
+            src: url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.woff2') format('woff2'),
+                url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.woff') format('woff'),
+                url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.ttf') format('truetype');
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: Shabnam;
+            src: url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam-Bold.eot');
+            src: url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam-Bold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam-Bold.woff2') format('woff2'),
+                url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam-Bold.woff') format('woff'),
+                url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam-Bold.ttf') format('truetype');
+            font-weight: bold;
+        }
+
+        @font-face {
+            font-family: Shabnam;
+            src: url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam-Light.eot');
+            src: url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam-Light.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam-Light.woff2') format('woff2'),
+                url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam-Light.woff') format('woff'),
+                url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam-Light.ttf') format('truetype');
+            font-weight: 300;
+        }
+
+        body {
+            font-family: Shabnam !important;
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p style="font-weight: 900;" class="text-center">
+                    <%=title%>
+                </p>
+                <p style="font-weight: 900;" class="text-center">
+                    کد پیگیری
+                </p>
+                <p class="text-center">
+                    <%=refId%>
+                </p>
+                <p style="font-weight: 900;" class="text-center">
+                    مبلغ پرداخت شده
+                </p>
+                <p class="text-center">
+                    <%=amount%> تومان
+                </p>
+                <p style="font-weight: 900;" class="text-center">
+                    تاریخ پرداخت
+                </p>
+                <p class="text-center">
+                    <%=date%>
+                </p>
+                <a href="intent:#Intent;action=com.appopenfromweb.sabkino;category=android.intent.category.DEFAULT;category=android.intent.category.BROWSABLE;S.msg_from_browser=Launched%20from%20Browser;end';" type="button" class="btn btn-success btn-lg btn-block">
+                    بازگشت به برنامه
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

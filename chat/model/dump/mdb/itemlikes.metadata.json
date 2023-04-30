@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"unique":true,"key":{"personId":{"$numberInt":"1"},"refId":{"$numberInt":"1"}},"name":"personId_1_refId_1","background":true}],"uuid":"f52b35f4fdbc4417800954a3f9816995","collectionName":"itemlikes"}

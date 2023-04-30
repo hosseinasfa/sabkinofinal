@@ -1,0 +1,1315 @@
+.app-featured-box-item.active .app-featured-box-title {
+    margin-top: 70px;
+}
+
+.app-featured-box-item.active {
+    background: linear-gradient(to bottom right, #0277bd, #ef8416);
+}
+
+.app-featured-box-item.active .app-featured-box-text {
+    position: absolute;
+    bottom: 30px;
+    right: 70px;
+}
+
+.video-last-item {
+    width: 100%;
+    text-align: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.video-last-item img {
+    width: 220px;
+}
+
+div#lbl_unit_screenshot {
+    background: none;
+    border: 0;
+    box-shadow: 0 0;
+    padding: 7px 0px 0px 0px;
+}
+
+div#lbl_unit_screenshot img {
+    width: calc(100% - 100px);
+}
+
+.monitor-video-item strong {
+    font-size: 1.5rem;
+    color: #22f9ef;
+}
+
+.app-video-box-step2 {
+    display: flex;
+    width: 50%;
+    margin: 40px auto 10px auto;
+    justify-content: center;
+}
+
+.app-video-description-step2 {
+    width: 50%;
+    position: relative;
+}
+
+.monitor-video-box-step2 {
+    display: flex;
+    width: 100%;
+    margin: 50px 0px 0px 0px;
+}
+
+.monitor-video-player-step2 {
+    position: relative;
+    width: 40%;
+}
+
+.monitor-video-description-step2 {
+    padding: 20px 80px 80px 80px;
+    width: 60%;
+    position: relative;
+}
+
+
+.middle-featured-box {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 20px auto 20px auto;
+    position: relative;
+}
+
+.middle-featured-right-box {
+    display: flex;
+    margin: 10px 0px 0px 0px;
+    padding: 20px;
+    justify-content: space-between;
+    width: 100%;
+    /*border-bottom: 1px solid #d1d1d1;*/
+}
+
+.middle-featured-right-box-image {
+    width: 33.5%;
+}
+
+.middle-featured-right-box-image img {
+    width: 100%;
+}
+
+.middle-featured-right-box-content p {
+    font-size: .9rem;
+    font-weight: bold;
+    font-family: 'IRANSans';
+    margin: 20px 30px 0px 0px;
+    font-weight: bold;
+    background-color: #d1d6d8;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.middle-featured-left-box {
+    display: flex;
+    margin: 10px 0px 0px 0px;
+    padding: 40px 20px 20px 20px;
+    justify-content: space-between;
+    width: 100%;
+    /*border-bottom: 1px solid #d1d1d1;*/
+}
+
+.middle-featured-left-box-content p {
+    font-size: .9rem;
+    font-family: 'IRANSans';
+    margin: 20px 30px 0px 0px;
+    font-weight: 100;
+    background-color: #d1d6d8;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.middle-featured-left-box-image {
+    width: 33.5%;
+}
+
+.middle-featured-left-box-image img {
+    width: 100%;
+}
+
+
+.contact-number i {
+    font-size: 1.5rem;
+    color: #0277bd;
+    position: absolute;
+    top: 1px;
+    left: -23px;
+}
+
+.contact-number {
+    margin: 13px 0px 0px 30px;
+    direction: ltr;
+    font-family: 'IRANSans';
+    font-size: 0.9rem;
+    position: relative;
+    font-weight: bold;
+}
+
+.app-link-box {
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    display: flex;
+    width: 285px;
+    flex-direction: row;
+    text-align: center;
+}
+
+.app-link-cutclick {
+    padding: 5px;
+    font-size: 0.75rem;
+    font-family: 'IRANSans';
+    background-color: #253338;
+    border-radius: 7px;
+    color: #ffffff;
+    margin-left: 7px;
+    width: 50%;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.7s;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-link-cutclick img {
+    width: 17px;
+}
+
+.app-link-cutclick:hover {
+    background-color: #777777;
+    color: #ffffff;
+}
+
+
+.app-link-kargah {
+    padding: 8px;
+    font-size: .9rem;
+    font-family: 'IRANSans';
+    background-color: #0277bd;
+    border-radius: 7px;
+    color: #ffffff;
+    margin-left: 7px;
+    width: 100%;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.7s;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-link-kargah img {
+    width: 35px;
+}
+
+.app-link-kargah:hover {
+    background-color: #253338;
+    color: #ffffff;
+}
+
+.top-right-menu ul li:first-child {
+    font-weight: bold;
+}
+
+
+.top-right-menu ul li a {
+    font-size: 1rem;
+    font-family: 'IRANSans';
+    /* color: #757575; */
+    font-weight: bold;
+}
+li.kargah-man a:hover {
+    color: white !important;
+}
+li.kargah-man a {
+    color: #0277bd !important;
+}
+
+li.cut-click a {
+    color: #ff5622;
+}
+
+.top-right-menu ul li {
+    margin: 0px 10px;
+}
+
+.top-right-menu ul {
+    display: inline-flex;
+}
+
+.top-right-menu {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-logo-box {
+    position: absolute;
+    width: 185px;
+    top: 3px;
+    right: 10px;
+    text-align: center;
+}
+
+.main-logo-box h2 {
+    font-size: 1.3rem;
+    color: #0277bd;
+    font-family: 'IRANSans';
+}
+
+.main-logo-box h3 {
+    font-size: 1.2rem;
+    background-color: #eceff1;
+    color: #37474f;
+    border-radius: 5px;
+    padding: 0px 10px 0px 10px;
+}
+
+.main-motto-box {
+    display: flex;
+}
+
+.main-motto-box img {
+    width: 70px;
+    margin-left: 10px;
+}
+
+.user-info {
+    font-family: 'IRANSans';
+    margin: 14px 0px 0px 10px;
+    position: relative;
+}
+
+
+ul.top-right-submenu li {
+    margin: 0;
+}
+
+ul.top-right-submenu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 10;
+    flex-direction: column;
+    width: 220px;
+    top: 27px;
+    transition: 0.7s;
+    /* align-items: center; */
+    /* justify-content: center; */
+    border: 1px solid #eaeaea;
+}
+
+ul.top-right-submenu li {
+    margin: 0;
+}
+
+.top-right-menu ul li:hover > .top-right-submenu {
+    display: flex;
+}
+
+ul.top-right-submenu li a {
+    padding: 10px 0px 10px 0px;
+    margin: 0;
+    display: block;
+}
+
+ul.top-right-submenu li a:hover {
+    background-color: #263239;
+    color: white;
+}
+
+.sub-categories-menu:after {
+    content: '';
+    display: block;
+    border-top: 8px solid #b5b3b3;
+    border-right: 5px solid transparent;
+    position: absolute;
+    border-left: 5px solid transparent;
+    border-bottom: 8px solid transparent;
+    top: 10px;
+    left: -8px;
+    z-index: 23;
+}
+
+.cut-header-top {
+    width: 100%;
+    text-align: center;
+    margin: 80px 0px 30px 0px;
+    /*height: calc(100vh - 180px);*/
+    display: flex;
+    flex-direction: column;
+    /*background-color: #f5f5f5;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+.cut-header-top-title h3 {
+    font-size: 1.8rem;
+    font-family: 'IRANSans';
+    font-weight: normal;
+    color: #0277bd;
+    /* font-weight: bold; */
+    margin: 30px 0px 0px 0px;
+}
+
+.cut-header-top-description strong {
+    color: #000000;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+.cut-header-top-description strong:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #0277bd;
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+}
+
+.cut-header-top-description p {
+    font-family: 'IRANSans';
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.middle-featured-box:before {
+    content: '';
+    width: 40%;
+    position: absolute;
+    right: 0;
+    top: 22px;
+    height: 1px;
+    background-image: linear-gradient(to right, red, yellow);
+}
+
+.middle-featured-box:after {
+    content: '';
+    width: 40%;
+    position: absolute;
+    left: 0;
+    top: 22px;
+    height: 1px;
+    background-image: linear-gradient(to right, red, yellow);
+}
+
+
+.cut-header-middle {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0px 30px 0px;
+    /* height: calc(100vh - 180px); */
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px 30px 0px;
+}
+
+.cut-header-middle-title h3 {
+    font-size: 2rem;
+    font-family: 'IRANSans';
+    font-weight: bold;
+}
+
+.cut-header-middle-description strong {
+    color: #ff5722;
+}
+
+.cut-header-middle-description p {
+    font-family: 'IRANSans';
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+.app-types {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.app-cutclick {
+    border: 1px solid #0277bd;
+    margin: 0px 20px;
+    padding: 7px 12px 7px 12px;
+    font-size: 1.1rem;
+    font-family: 'IRANSans';
+    background-color: #0277bd;
+    border-radius: 10px;
+    color: white;
+}
+
+.app-kargah {
+    border: 1px solid #607D8B;
+    margin: 0px 20px;
+    padding: 7px 12px 7px 12px;
+    font-size: 1rem;
+    font-family: 'IRANSans';
+    /* background-color: #455a64; */
+    border-radius: 10px;
+    color: #253338;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.swiper-slide-item {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+    border: 1px solid #d7bebe;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px #cbcbcb;
+    background-color: white;
+    height: 220px;
+}
+
+.companies-slider-box {
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin: 10px 0px 0px 0px;
+}
+
+.companies-slider-title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.companies-slider-title h3 {
+    text-align: center;
+    font-family: 'IRANSans';
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 30px 0px;
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 7px 30px 7px 30px;
+}
+
+
+.swiper-slide-item-image {
+    width: 160px;
+    max-width: 160px;
+    max-height: 150px;
+    /* height: 120px; */
+}
+
+.swiper-slide-item-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    /* border: 1px solid #cbc7c7; */
+    padding: 10px;
+    /*max-height: 130px;*/
+    border-radius: 20px;
+}
+
+.swiper-slide-item-title {
+    font-size: .8rem;
+    font-family: 'IRANSans';
+}
+
+.app-featured {
+    margin: 30px 0px 0px 0px;
+}
+
+.app-featured-title h3 {
+    text-align: center;
+    font-family: 'IRANSans';
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.app-featured-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.app-featured-content p, strong {
+    font-family: 'IRANSans';
+    font-size: 1.2rem;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.app-featured-content strong {
+    color: #ff5722;
+}
+
+.app-featured-box {
+    margin: 30px 0px 0px 0px;
+}
+
+.app-featured-box-top-title {
+    margin: 0px 0px 40px 0px;
+}
+
+.app-featured-box-top-title h3 {
+    text-align: center;
+    font-family: 'IRANSans';
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.app-featured-box-list {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0px 0px 0px;
+}
+
+.app-featured-box-item {
+    background-color: white;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    padding: 20px 10px 20px 10px;
+    width: calc(25% - 30px);
+    box-shadow: 1px 2px 5px #acacac;
+    position: relative;
+}
+
+.app-featured-box-icon {
+    width: 90px;
+    margin: auto;
+}
+
+.app-featured-box-icon img {
+    width: 100%;
+}
+
+.app-featured-box-title h3 {
+    text-align: center;
+    font-family: 'IRANSans';
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.app-featured-box-motto {
+    font-family: 'IRANSans';
+    font-size: 1rem;
+    color: #0277bd;
+    font-weight: bold;
+}
+
+.app-featured-box-text p {
+    font-family: 'IRANSans';
+    font-size: .9rem;
+    color: #747474;
+}
+
+.app-featured-box-item.active {
+    background: linear-gradient(to bottom right, #0277bd, #ef8416);
+}
+
+.app-featured-box-item.active .app-featured-box-title h3 {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.app-featured-box-item.active .app-featured-box-text p {
+    color: #253338;
+    font-size: 1.1rem;
+    background-color: white;
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.download-kargah:hover {
+    background-color: #253338;
+    color: white;
+}
+
+.download-kargah {
+    background-color: white;
+    padding: 15px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'IRANSans';
+    color: #253338;
+    transition: 0.7s;
+    font-weight: bold;
+    width: 200px;
+}
+
+
+/*.swiper-slide {*/
+/*    text-align: center;*/
+/*    font-size: 18px;*/
+/*    background: #fff;*/
+
+/*    !* Center slide text vertically *!*/
+/*    display: -webkit-box;*/
+/*    display: -ms-flexbox;*/
+/*    display: -webkit-flex;*/
+/*    display: flex;*/
+/*    -webkit-box-pack: center;*/
+/*    -ms-flex-pack: center;*/
+/*    -webkit-justify-content: center;*/
+/*    justify-content: center;*/
+/*    -webkit-box-align: center;*/
+/*    -ms-flex-align: center;*/
+/*    -webkit-align-items: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.swiper-slide img {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
+.app-video-box {
+    display: flex;
+    width: 50%;
+    margin: 40px auto 10px auto;
+    justify-content: center;
+}
+
+.app-video-player-image {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 634px;
+}
+
+.app-video-player-image img {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 300px;
+    z-index: -1 !important;
+}
+
+.app-video-player-content {
+    /*padding: 20px;*/
+}
+
+.app-video-player-content video {
+    width: calc(100% - 20px);
+    height: calc(100% - 60px);
+    border-radius: 20px;
+    z-index: 0 !important;
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    background-color: #161414;
+}
+
+.app-video-description {
+    width: 50%;
+    position: relative;
+}
+
+
+.middle-padcod-main-view {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #0277bd, #ef8416);
+    margin: 50px 0px 0px 0px;
+}
+
+.middle-padcod-view-title h3 {
+    text-align: center;
+    font-family: 'IRANSans';
+    font-size: 2rem;
+    font-weight: 100;
+    color: white;
+    position: relative;
+    margin: 0px 0px 50px 0px;
+    font-weight: bold;
+}
+
+.middle-padcod-view-title h3:before {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: #ffffff4a;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 250px);
+}
+
+.middle-padcod-view-title h3:after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: #ffffff4a;
+    position: absolute;
+    bottom: 0;
+    right: calc(50% - 250px);
+}
+
+.middle-padcod-view-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0px 40px 0px;
+}
+
+.middle-padcod-view-item {
+    text-align: center;
+    background-color: #ffffff45;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 14px #ffffff94;
+    width: calc(25% - 30px);
+    height: 150px;
+    position: relative;
+}
+
+.middle-padcod-view-item-image {
+    font-size: 1.8rem;
+    font-family: 'IRANSans';
+    color: white;
+    font-weight: bold;
+}
+
+.middle-padcod-view-item-title h4 {
+    font-size: 1.3rem;
+    font-family: 'IRANSans';
+    color: white;
+    font-weight: bold;
+}
+
+.middle-padcod-view-item-title {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.middle-padcod-view-item-image img {
+    width: 70px;
+}
+
+.app-video-list {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    font-size: 1rem;
+    font-family: 'IRANSans';
+    font-weight: bold;
+    position: relative;
+    margin: 60px 0px 0px 0px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.app-video-item-left {
+    /*background-color: #000000ab;*/
+    margin: 10px 0px 0px 0px;
+    padding: 15px 45px 15px 45px;
+    border-radius: 7px;
+    display: none;
+    position: absolute;
+    left: 195px;
+    width: 75%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    /*box-shadow: 1px 2px 4px #424040;*/
+}
+
+@media screen and (min-width: 1920px) {
+    .app-video-item-left {
+        left: 230px;
+    }
+}
+
+.app-video-item {
+    background-color: #000000ab;
+    margin: 10px 0px 0px 0px;
+    padding: 15px 45px 15px 45px;
+    border-radius: 7px;
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 75%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 1px 2px 4px #424040;
+}
+
+.app-video-player {
+    position: relative;
+}
+
+.monitor-video-box {
+    display: flex;
+    width: 100%;
+    margin: 50px 0px 0px 0px;
+}
+
+.monitor-video-player {
+    position: relative;
+    width: 40%;
+}
+
+.monitor-video-player-image {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.monitor-video-player-image img {
+    /*position: absolute;*/
+    display: block;
+    /*height: 100%;*/
+    width: 100%;
+    /*z-index: -1 !important;*/
+}
+
+.monitor-video-player-content {
+    display: block;
+    width: 100%;
+    /* height: calc(100% - 300px); */
+    position: absolute;
+    top: 47px;
+    right: -1px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.monitor-video-player-content video {
+    width: calc(100% - 85px);
+    /* border-radius: 20px; */
+    height: calc(80% + 40px);
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.app-video-item-left img {
+    width: calc(100% - 40px);
+}
+
+.app-video-item img {
+    width: calc(100% - 40px);
+}
+
+.monitor-video-item {
+    position: absolute;
+    background-color: #0000007d;
+    margin: 10px 0px 0px 0px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    font-family: 'IRANSans';
+    color: white;
+    text-align: center;
+    display: none;
+    width: calc(100% - 50px);
+    box-shadow: 1px 2px 4px #424040;
+}
+
+.monitor-video-description {
+    padding: 20px 80px 80px 80px;
+    width: 60%;
+    position: relative;
+}
+
+.monitor-video-list {
+    width: 100%;
+    position: relative;
+}
+
+
+.video-box {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 20px 0px 0px 0px;
+    /*border-bottom: 1px solid #ececec;*/
+    padding-bottom: 30px;
+    min-height: 600px;
+}
+
+.app-video-item strong {
+    color: #fe784e;
+    font-size: 1.7rem;
+}
+
+.app-single-video-box {
+    display: flex;
+    width: 85%;
+    margin: 40px auto 10px auto;
+    justify-content: center;
+}
+
+.app-single-video-player {
+    position: relative;
+}
+
+.app-single-video-player-image {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 634px;
+}
+
+.app-single-video-player-image img {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 300px;
+    z-index: -1 !important;
+}
+
+.app-single-video-player-content video {
+    width: calc(100% - 20px);
+    height: calc(100% - 60px);
+    border-radius: 20px;
+    z-index: 0 !important;
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    background-color: #161414;
+}
+
+.app-single-video-description {
+    width: 30%;
+}
+
+.app-single-video-list {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    font-size: 1.2rem;
+    font-family: 'IRANSans';
+    font-weight: bold;
+    position: relative;
+}
+
+.app-single-video-item {
+    background-color: whitesmoke;
+    margin: 10px 0px 0px 0px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    position: absolute;
+    display: none;
+    width: 220px;
+    text-align: center;
+}
+
+@keyframes featured-item-1 {
+    0% {
+        /*background-color: #253338;*/
+        top: -450px;
+        /*top: 0px;*/
+        color: white;
+        box-shadow: 1px 2px 4px #424040;
+
+    }
+    100% {
+        /*background-color: #253338;*/
+        top: 0px;
+        /*top: 0px;*/
+        color: white;
+        box-shadow: 1px 2px 4px #424040;
+    }
+}
+
+@keyframes featured-item-2 {
+    0% {
+        /*background-color: #253338;*/
+        top: -450px;
+        /*top: 0px;*/
+        color: white;
+        box-shadow: 1px 2px 4px #424040;
+
+    }
+    100% {
+        /*background-color: #253338;*/
+        top: 110px;
+        /*top: 0px;*/
+        color: white;
+        box-shadow: 1px 2px 4px #424040;
+    }
+}
+
+@keyframes featured-item-25 {
+    0% {
+        /*background-color: #253338;*/
+        top: -450px;
+        /*top: 0px;*/
+        color: white;
+        /*box-shadow: 1px 2px 4px #424040;*/
+
+    }
+    100% {
+        /*background-color: #253338;*/
+        top: 210px;
+        /*top: 0px;*/
+        color: white;
+        /*box-shadow: 1px 2px 4px #424040;*/
+    }
+}
+
+@keyframes featured-item-3 {
+    0% {
+        /*background-color: #253338;*/
+        left: -450px;
+        /*top: 0px;*/
+        color: white;
+        /*box-shadow: 1px 2px 4px #424040;*/
+
+    }
+    100% {
+        /*background-color: #253338;*/
+        left: 195px;
+        /*top: 0px;*/
+        color: white;
+        /*box-shadow: 1px 2px 4px #424040;*/
+    }
+}
+
+@keyframes featured-item-4 {
+    0% {
+        /*background-color: #253338;*/
+        top: -450px;
+        /*top: 0px;*/
+        color: white;
+        box-shadow: 1px 2px 4px #424040;
+
+    }
+    100% {
+        /*background-color: #253338;*/
+        top: 0px;
+        /*top: 0px;*/
+        color: white;
+        box-shadow: 1px 2px 4px #424040;
+    }
+}
+
+@keyframes featured-item-5 {
+    0% {
+        /*background-color: #253338;*/
+        top: -450px;
+        /*top: 0px;*/
+        color: white;
+        box-shadow: 1px 2px 4px #424040;
+
+    }
+    100% {
+        /*background-color: #253338;*/
+        top: 110px;
+        /*top: 0px;*/
+        color: white;
+        box-shadow: 1px 2px 4px #424040;
+    }
+}
+
+@keyframes featured-item-6 {
+    0% {
+        background-color: #253338;
+        right: -450px;
+        /*top: 0px;*/
+        color: white;
+        box-shadow: 1px 2px 4px #424040;
+
+    }
+    100% {
+        background-color: #253338;
+        right: 100px;
+        /*top: 0px;*/
+        color: white;
+        box-shadow: 1px 2px 4px #424040;
+    }
+}
+
+.featured-item-animate-class-1 {
+    animation-name: featured-item-1;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    z-index: -2 !important;
+    display: block;
+}
+
+.featured-item-animate-class-2 {
+    animation-name: featured-item-2;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    z-index: -2 !important;
+    display: block;
+}
+
+.featured-item-animate-class-3 {
+    animation-name: featured-item-3;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    z-index: -2 !important;
+    display: block;
+    /*right: 40px;*/
+}
+
+.featured-item-animate-class-4 {
+    animation-name: featured-item-4;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    z-index: -2 !important;
+    display: block;
+}
+
+.featured-item-animate-class-5 {
+    animation-name: featured-item-5;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    z-index: -2 !important;
+    display: block;
+}
+
+
+.featured-item-animate-class-6 {
+    animation-name: featured-item-25;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    z-index: -2 !important;
+    display: block;
+    right: 75px;
+}
+
+.featured-item-animate-class-7 {
+    animation-name: featured-item-2;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    z-index: -2 !important;
+    display: block;
+}
+
+.featured-item-animate-class-8 {
+    animation-name: featured-item-3;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    z-index: -2 !important;
+    display: block;
+    /*right: 40px;*/
+}
+
+
+/*.app-video-list .app-video-item:first-child*/
+/*{*/
+/*    */
+/*}*/
+.companies-slider-title strong {
+    color: #0277bd;
+    font-size: 1.4rem;
+}
+
+.app-featured-header-top-title h3 {
+    font-size: 1.8rem;
+    font-family: 'IRANSans';
+    font-weight: normal;
+    color: #0277bd;
+    /* font-weight: bold; */
+    margin: 30px 0px 0px 0px;
+    text-align: center;
+}
+
+.app-featured-header-top-description p {
+    font-family: 'IRANSans';
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 50px;
+    /*padding: 30px;*/
+}
+
+.app-featured-header-top-description {
+    padding: 30px;
+    text-align: center;
+}
+
+.app-featured-header-top-description strong {
+    position: relative;
+    color: #0277bd;
+}
+
+.app-featured-header-top-description strong:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #0277bd;
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+}
+
+.contact-us-item i {
+    background-color: #0277bd !important;
+    width: 30px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+a.contact-link:hover {
+    background-color: white;
+    color: #0277bd !important;
+}
+
+.menu ul.main-menu li a:hover:after
+{
+    background-color: #0277bd;
+}
+
+.contact-us-item i:hover
+{
+    color: white !important;
+}
