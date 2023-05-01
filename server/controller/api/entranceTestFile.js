@@ -35,7 +35,7 @@ module.exports = {
                 }
             })
     },
-    POST_ENTRANCE_EXAM_FILE: (req , res , next) => {
+    POST_ENTRANCE_TEST_FILE: (req , res , next) => {
         // return console.log(req.file);
         // req.body.userId = req.data.personInfo._id;
         
